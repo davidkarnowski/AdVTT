@@ -10,7 +10,7 @@ A Python package (`src/advtt/`) that finds advertising and sponsorship spans in
 a transcript of finished audio and writes a canonical JSON record
 (`<stem>.advtt.json`, profile `advtt/1.0`) plus exporters (EDL, ffmetadata
 and JSON chapters, SponsorBlock JSON, WebVTT, SRT twin, Audacity labels, RTTM,
-full-transcript captions in VTT and SRT with the ad cues marked). It never cuts audio. Extracted
+full-transcript captions in VTT and SRT with the ad cues marked). It classifies; it produces no derivative media. Extracted
 from PodcastFetch (a private sibling project; its `adclass.py`), which will
 re-consume it. Scripts that need it read the `PODCASTFETCH_ROOT` environment
 variable. Plan and decisions: `Research/12-*.md`. Evidence:

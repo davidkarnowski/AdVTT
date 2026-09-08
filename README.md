@@ -1,16 +1,34 @@
 # AdVTT
 
-AdVTT finds host-read sponsorship and advertising inside transcripts of
-finished audio, podcasts first, using a large language model, and writes the
-result as a canonical JSON record with provenance. From that record it exports
-the formats players and editors already act on: EDL, ffmetadata chapters,
-Podcasting 2.0 JSON chapters, SponsorBlock JSON, WebVTT, an SRT twin, Audacity
-labels and RTTM. It never cuts audio. What to do with the marks is up to the
-player, the archive, or the ingestion pipeline that reads them.
+AdVTT finds host-read sponsorship and advertising inside podcasts and other
+finished audio, using a large language model, and tells you exactly where
+each ad block starts and ends.
 
-It was extracted from PodcastFetch, a private podcast downloader where the
-classifier was first built and tuned, and stands on its own as a Python
-package with no hard dependencies.
+**What goes in.** One of three things:
+
+- a media file (audio, or video with an audio track), which AdVTT
+  transcribes first with a local or cloud speech-to-text engine;
+- an existing transcript with timed segments, from any engine;
+- a caption file, WebVTT or SRT.
+
+**What comes out.** A classification of that input, as files beside it:
+
+- a canonical JSON record (`<stem>.advtt.json`) listing every ad span with
+  its start and end time, category, confidence, and a recommended playback
+  action, plus provenance: which transcriber and which classifier produced
+  it, and a fingerprint of the exact media file;
+- a local analysis file with the evidence quote behind each span;
+- exports of that same classification in the formats players and editors
+  already read: EDL, ffmetadata chapters, Podcasting 2.0 JSON chapters,
+  SponsorBlock JSON, a WebVTT disclosure track, an SRT twin, Audacity
+  labels, RTTM, and full-transcript caption files (VTT and SRT) with the ad
+  cues marked.
+
+The pipeline evaluates and classifies; it produces no derivative media. The
+only outputs are the classification and the caption and metadata files
+listed above. What to do with the marks is up to the player, the archive,
+or the ingestion pipeline that reads them. It is a Python package with no
+hard dependencies.
 
 ## Why this exists
 
@@ -193,7 +211,7 @@ the span's title, confidence and time remaining while an ad block is
 playing, the transcript panel follows playback with ad cues marked, and a
 skip button jumps past the block. Seek to a marked span and listen to both
 edges; a span that starts late or ends early is the most common finding.
-Auto-skip is off by default and the media file is never modified.
+Auto-skip is off by default; the page only reads the media file.
 `examples/README.md` has the details and keyboard shortcuts.
 
 ## For agents
@@ -276,8 +294,9 @@ Experiment results are logged in `Research/research-log/K-experiments.md`.
 - Changing `prompts.py`, `chunking.py`, `validate.py` or `refine.py` is a
   `prompt_version` (or `LADDER_VERSION`) bump, because recorded results and
   replay keys depend on them.
-- Not a general ad blocker, and not an audio editor. It writes metadata about
-  a file the user already holds; transcripts and evidence quotes stay local.
+- Not a general ad blocker. It classifies a file the user already holds
+  and writes only the classification and caption files; no derivative media
+  is produced. Transcripts and evidence quotes stay local.
 
 Deeper reading: `docs/architecture.md` (module map, provider contract, how to
 evaluate the code), `CLAUDE.md` (the operational version for agents working

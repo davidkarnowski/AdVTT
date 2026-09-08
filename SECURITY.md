@@ -2,8 +2,8 @@
 
 AdVTT reads local media and transcript files and, when asked, sends
 transcript text to a model provider or audio to a speech-to-text service.
-It never cuts or writes media, and `--offline` refuses every network
-provider. Keys are read from the environment or a `.env` file and are never
+It produces no derivative media, only classification and caption files,
+and `--offline` refuses every network provider. Keys are read from the environment or a `.env` file and are never
 written to any output.
 
 ## Reporting a vulnerability

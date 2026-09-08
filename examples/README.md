@@ -9,7 +9,7 @@ shows an AD banner with title, confidence, category and time remaining while an
 ad block is playing, offers "Skip this ad" and an auto-skip toggle (off by
 default: skipping is a policy decision), and lists the transcript and the
 chapters (Part 1, Ad, Part 2, ...) with click-to-seek. It marks and optionally
-skips during playback; the media file is never modified.
+skips during playback; it only reads the media file.
 
 Open it by double-clicking the file (it works from `file://`, no server, no
 network). Then pick or drag in:
