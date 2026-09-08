@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0.dev0 (unreleased)
+## 0.1.0.dev0 (2026-09-07, first public snapshot)
 
 First public snapshot. Extracted from a private podcast downloader and
 rebuilt as a standalone, stdlib-only package.

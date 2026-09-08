@@ -96,7 +96,8 @@ installed (the PodcastFetch venv, `$PODCASTFETCH_ROOT/.venv/bin/python`):
 - Never write into the PodcastFetch tree. Never put transcripts of copyrighted
   episodes into git. `data/` and `eval-out/` are gitignored on purpose.
 - Commits end with exactly one `Co-Authored-By: Claude <model> <noreply@anthropic.com>`
-  trailer and never a session link. The GitHub repo is private and must not be
-  made public without the user's explicit approval.
+  trailer and never a session link. The GitHub repo is public (since
+  2026-09-07, single-commit snapshot); never commit transcripts, audio, keys,
+  private paths or session identifiers.
 - Docstrings carry the measured reason for every non-obvious rule. Keep them
   when moving code; add one when adding a rule.

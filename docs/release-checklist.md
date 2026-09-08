@@ -38,7 +38,7 @@ settings. Read-only audit; nothing below has been applied yet.
   `cd "$(dirname "$0")/.."` in `overnight_jre.sh:6`, and repo-relative names
   in the two research files. The same lines exist in history; they reveal only
   the login name, so no history rewrite is needed for them.
-- [ ] **Decide on the commit author email** (still open, see the history note below). All 22 commits carry the owner's
+- [x] **Decide on the commit author email** (GitHub noreply address on the snapshot commit, 2026-09-07) (still open, see the history note below). All 22 commits carry the owner's
   personal Gmail address as author and committer. It becomes public with the
   repository. Either accept it, or rewrite history once, before the first
   public push, to the GitHub noreply address (`git filter-repo --mailmap`)
@@ -86,7 +86,7 @@ author-email decision is made in the same step.
 - [x] **Align the exporter list in `CLAUDE.md:11-12`** ("EDL, chapters,
   SponsorBlock JSON, WebVTT, SRT twin, labels") with `exporters.py:25` and the
   `README.md` table, which also have `ffmeta` and `rttm`.
-- [ ] **GitHub settings when flipping public** (checked with `gh repo view`):
+- [x] **GitHub settings when flipping public** (public 2026-09-07 with description and topics; branch protection and a first tag still optional) (checked with `gh repo view`):
   description is empty, no topics, no homepage, no tags or releases, issues
   on, discussions and wiki off, default branch `main`. Set the description to
   the `pyproject.toml` one-liner; add topics `podcast`, `advertising`,
