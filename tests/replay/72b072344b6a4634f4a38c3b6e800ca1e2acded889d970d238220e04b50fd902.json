@@ -1,0 +1,46 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-opus-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 193,
+    "end_index": 203,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here. Now, I've been a business owner for years",
+    "end_evidence": "Again, that's Quo, Q-U-O, Quo.com slash PDB."
+   },
+   {
+    "start_index": 204,
+    "end_index": 216,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here with a message for dog lovers.",
+    "end_evidence": "or use code PDB at checkout."
+   },
+   {
+    "start_index": 248,
+    "end_index": 249,
+    "kind": "house",
+    "confidence": 0.9,
+    "evidence": "And if you'd like your PDB ad free, well, we can make that happen.",
+    "end_evidence": "by visiting PDBpremium.com."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":193,\"end_index\":203,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here. Now, I've been a business owner for years\",\"end_evidence\":\"Again, that's Quo, Q-U-O, Quo.com slash PDB.\"},{\"start_index\":204,\"end_index\":216,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here with a message for dog lovers.\",\"end_evidence\":\"or use code PDB at checkout.\"},{\"start_index\":248,\"end_index\":249,\"kind\":\"house\",\"confidence\":0.9,\"evidence\":\"And if you'd like your PDB ad free, well, we can make that happen.\",\"end_evidence\":\"by visiting PDBpremium.com.\"}]}",
+ "meta": {
+  "wall_sec": 8.96,
+  "prompt_tokens": 2,
+  "completion_tokens": 556,
+  "thinking_tokens": 224,
+  "cache_read_tokens": 7249,
+  "cache_write_tokens": 10177,
+  "cost_usd": 0.1231115,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 1188,
+    "end_index": 1215,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by Uber Eats.",
+    "end_evidence": "smoking ribs"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":1188,\"end_index\":1215,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by Uber Eats.\",\"end_evidence\":\"smoking ribs\"}]}",
+ "meta": {
+  "wall_sec": 9.85,
+  "prompt_tokens": 2,
+  "completion_tokens": 658,
+  "thinking_tokens": 524,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 13475,
+  "cost_usd": 0.0712342,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

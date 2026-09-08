@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 1256,
+    "end_index": 1268,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is sponsored by BetterHelp.",
+    "end_evidence": "That's better h-e-l-p.com slash j-r-e."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":1256,\"end_index\":1268,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is sponsored by BetterHelp.\",\"end_evidence\":\"That's better h-e-l-p.com slash j-r-e.\"}]}",
+ "meta": {
+  "wall_sec": 6.77,
+  "prompt_tokens": 2,
+  "completion_tokens": 317,
+  "thinking_tokens": 170,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 10706,
+  "cost_usd": 0.0565982,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

@@ -1,0 +1,387 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>AdVTT player prototype</title>
+<style>
+  :root {
+    --bg:#12141a; --fg:#e6e8ee; --dim:#8a92a6; --line:#262b36;
+    --ad:#d8563f; --uncertain:#c9a227; --prog:#2f6f4f; --accent:#5b8dd6;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:14px/1.5 ui-sans-serif,-apple-system,Segoe UI,Roboto,sans-serif; }
+  main { max-width: 900px; margin: 0 auto; padding: 24px 20px 60px; }
+  h1 { font-size:18px; margin:0 0 4px; letter-spacing:.01em; }
+  .sub { color:var(--dim); margin:0 0 20px; }
+  .panel { border:1px solid var(--line); border-radius:8px; padding:16px; margin:16px 0; }
+  .drop { border:1px dashed var(--line); border-radius:8px; padding:14px;
+          color:var(--dim); text-align:center; }
+  .drop.hot { border-color:var(--accent); color:var(--fg); }
+
+  /* seek bar */
+  .bar { position:relative; height:34px; background:#1b1f27; border-radius:5px;
+         cursor:pointer; overflow:hidden; margin:10px 0 6px; }
+  .region { position:absolute; top:0; bottom:0; opacity:.85; }
+  .region.ad        { background:var(--ad); }
+  .region.uncertain { background:var(--uncertain); }
+  .region.program   { background:var(--prog); opacity:.35; }
+  .region .tip { display:none; }
+  .played { position:absolute; top:0; bottom:0; left:0; background:rgba(255,255,255,.10); }
+  .head { position:absolute; top:-3px; bottom:-3px; width:2px; background:#fff; }
+  .ticks { display:flex; justify-content:space-between; color:var(--dim);
+           font-variant-numeric:tabular-nums; font-size:12px; }
+
+  .controls { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px; }
+  button { background:#222834; color:var(--fg); border:1px solid var(--line);
+           border-radius:6px; padding:7px 12px; font:inherit; cursor:pointer; }
+  button:hover { border-color:var(--accent); }
+  button.primary { background:var(--ad); border-color:var(--ad); color:#fff; font-weight:600; }
+  button[disabled] { opacity:.4; cursor:default; }
+  label.chk { color:var(--dim); display:flex; gap:6px; align-items:center; cursor:pointer; }
+  .clock { font-variant-numeric:tabular-nums; color:var(--dim); margin-left:auto; }
+
+  .status { margin-top:10px; padding:10px 12px; border-radius:6px; background:#1b1f27;
+            border-left:3px solid var(--line); }
+  .status.ad        { border-left-color:var(--ad); }
+  .status.uncertain { border-left-color:var(--uncertain); }
+  .status .why { color:var(--dim); font-size:13px; }
+
+  table { width:100%; border-collapse:collapse; font-size:13px; }
+  th,td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line);
+          vertical-align:top; }
+  th { color:var(--dim); font-weight:500; }
+  td.t { font-variant-numeric:tabular-nums; white-space:nowrap; color:var(--dim); }
+  tr.now td { background:#1b1f27; }
+  .pill { display:inline-block; padding:1px 7px; border-radius:99px; font-size:11.5px;
+          font-weight:600; letter-spacing:.02em; }
+  .pill.ad{background:var(--ad);color:#fff}
+  .pill.uncertain{background:var(--uncertain);color:#1b1f27}
+  .pill.program{background:var(--prog);color:#fff}
+  code { color:#b9c4da; }
+  .note { color:var(--dim); font-size:13px; }
+  audio, video { width:100%; margin-top:8px; background:#000; border-radius:6px; }
+</style>
+
+<main>
+  <h1>AdVTT player prototype</h1>
+  <p class="sub">Reads an <code>advtt/0.1</code> media-events WebVTT track, draws the
+     marked regions on the seek bar, and offers a skip. Auto-skip ships off.</p>
+
+  <div class="panel">
+    <div id="drop" class="drop">
+      Drop a <b>media file</b> and/or a <b>.vtt</b> here — or press play to run the
+      built-in demo timeline (no media needed).
+    </div>
+    <div id="mediaHost"></div>
+
+    <div id="bar" class="bar"><div id="played" class="played"></div><div id="head" class="head"></div></div>
+    <div class="ticks"><span id="t0">0:00</span><span id="t1">0:00</span></div>
+
+    <div class="controls">
+      <button id="play">▶︎ Play</button>
+      <button id="back">← 15s</button>
+      <button id="fwd">15s →</button>
+      <button id="skip" class="primary" disabled>Skip ad</button>
+      <label class="chk"><input type="checkbox" id="auto"> auto-skip</label>
+      <label class="chk"><input type="checkbox" id="turbo" checked> demo 20×</label>
+      <span class="clock" id="clock">0:00 / 0:00</span>
+    </div>
+
+    <div id="status" class="status">
+      <div id="statusMain">Program</div>
+      <div class="why" id="statusWhy">No marking at this position.</div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <table id="cues"><thead><tr>
+      <th>id</th><th>start</th><th>end</th><th>type</th><th>conf</th><th>skippable</th><th>label</th>
+    </tr></thead><tbody></tbody></table>
+    <p class="note" id="hdr"></p>
+  </div>
+</main>
+
+<script type="text/plain" id="sample">
+WEBVTT
+NOTE ADVTT/0.1
+{"profile":"advtt/0.1","media_id":"signal-noise-112","media_duration_sec":2412.4,
+ "generated":"2026-09-01T09:14:02Z","status":"ok",
+ "classifier":{"provider":"openai","model":"gpt-5.5","prompt_version":"2026-08-g"},
+ "thresholds":{"ad":0.75,"uncertain":0.40}}
+
+ad-001
+00:12:31.200 --> 00:12:59.800
+ADVERTISEMENT
+{"v":"advtt/0.1","type":"ADVERTISEMENT","id":"ad-001","confidence":0.98,"state":"ad","kind":"midroll","skippable":true,"label":"Acme Corporation","edges":{"mode":"word","start_exact":751.24,"end_exact":779.80}}
+
+ad-002
+00:27:44.100 --> 00:28:14.000
+SPONSORSHIP
+{"v":"advtt/0.1","type":"SPONSORSHIP","id":"ad-002","confidence":0.61,"state":"uncertain","kind":"midroll","skippable":false,"label":"Example Company","edges":{"mode":"segment"},"note":"evidence quote did not match verbatim; confidence halved"}
+
+ad-003
+00:38:10.000 --> 00:39:44.500
+ADVERTISEMENT
+{"v":"advtt/0.1","type":"ADVERTISEMENT","id":"ad-003","confidence":0.91,"state":"ad","kind":"postroll","skippable":true,"label":"Widget Pro","edges":{"mode":"word","start_exact":2290.0,"end_exact":2384.5}}
+</script>
+
+<script>
+"use strict";
+
+/* ---------------------------------------------------------------- parser --
+   One parser, used for both delivery paths: a dropped file and (when a real
+   <track kind="metadata"> is present) the browser's own cue list. Depending on
+   the element alone is not safe -- cue exposure for metadata tracks is not
+   uniform, and the track must be mode="hidden", never "disabled".
+   NOTE blocks are not exposed by the TextTrack API at all, which is why the
+   header is read here, from the text.                                        */
+
+function parseTime(s) {
+  const m = /^(?:(\d+):)?(\d{1,2}):(\d{2})[.,](\d{1,3})$/.exec(s.trim());
+  if (!m) return null;
+  return (+(m[1] || 0)) * 3600 + (+m[2]) * 60 + (+m[3]) + (+m[4]) / 1000;
+}
+
+function parseAdVTT(text) {
+  const lines = text.replace(/\r\n?/g, "\n").split("\n");
+  const blocks = [];
+  let cur = [];
+  for (const ln of lines) {
+    if (ln.trim() === "") { if (cur.length) blocks.push(cur), cur = []; }
+    else cur.push(ln);
+  }
+  if (cur.length) blocks.push(cur);
+
+  const out = { header: null, cues: [], errors: [] };
+  for (const b of blocks) {
+    if (/^WEBVTT/.test(b[0])) continue;
+    if (/^NOTE\b/.test(b[0])) {
+      if (/ADVTT\/[\d.]+/.test(b[0])) {
+        try { out.header = JSON.parse(b.slice(1).join("\n")); }
+        catch (e) { out.errors.push("header JSON: " + e.message); }
+      }
+      continue;
+    }
+    let i = 0, id = null;
+    if (!b[0].includes("-->")) { id = b[0].trim(); i = 1; }
+    const t = (b[i] || "").split("-->");
+    if (t.length !== 2) continue;
+    const start = parseTime(t[0]), end = parseTime(t[1].split(/\s+/)[0]);
+    if (start == null || end == null) { out.errors.push("bad timing: " + b[i]); continue; }
+
+    const payload = b.slice(i + 1);
+    const token = (payload[0] || "").trim();
+    let data = null;
+    if (payload.length > 1) {
+      try { data = JSON.parse(payload.slice(1).join("\n")); }
+      catch (e) { out.errors.push((id || token) + ": payload JSON: " + e.message); }
+    }
+    // Profile rule: the token line is normative and must agree with data.type.
+    // Disagreement is a rejected cue, not a merge -- redundancy that can
+    // disagree is a bug source.
+    if (data && data.type && data.type !== token) {
+      out.errors.push((id || token) + ": token/type mismatch; cue rejected");
+      continue;
+    }
+    const ev = Object.assign({ type: token, id: id || token, confidence: null,
+                               state: "ad", skippable: false }, data || {});
+    ev.id = id || ev.id;
+    ev.start = (ev.edges && typeof ev.edges.start_exact === "number") ? ev.edges.start_exact : start;
+    ev.end   = (ev.edges && typeof ev.edges.end_exact   === "number") ? ev.edges.end_exact   : end;
+    ev.cueStart = start; ev.cueEnd = end;
+    out.cues.push(ev);
+  }
+  out.cues.sort((a, b2) => a.start - b2.start);
+  return out;
+}
+
+/* --------------------------------------------------------------- state -- */
+const $ = (s) => document.querySelector(s);
+let track = parseAdVTT($("#sample").textContent);
+let duration = (track.header && track.header.media_duration_sec) || 2412.4;
+let media = null;                 // a real <audio>/<video>, or null (demo clock)
+let demoT = 0, playing = false, lastTick = 0;
+let seekGuardUntil = 0;           // a deliberate move into an ad is honoured
+let skipTimer = null;
+
+const fmt = (s) => {
+  s = Math.max(0, s | 0);
+  const h = (s / 3600) | 0, m = ((s % 3600) / 60) | 0, x = s % 60;
+  return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(x).padStart(2, "0");
+};
+const now = () => media ? media.currentTime : demoT;
+const rate = () => (media ? media.playbackRate : ($("#turbo").checked ? 20 : 1)) || 1;
+
+function eventAt(t) {
+  for (const c of track.cues) if (t >= c.start && t < c.end && c.type !== "PROGRAM") return c;
+  return null;
+}
+
+/* --------------------------------------------------------------- render -- */
+function drawRegions() {
+  const bar = $("#bar");
+  [...bar.querySelectorAll(".region")].forEach((n) => n.remove());
+  for (const c of track.cues) {
+    const d = document.createElement("div");
+    const cls = c.type === "PROGRAM" ? "program" : (c.state === "ad" ? "ad" : "uncertain");
+    d.className = "region " + cls;
+    d.style.left  = (100 * c.start / duration) + "%";
+    d.style.width = (100 * (c.end - c.start) / duration) + "%";
+    d.title = c.type + "  " + fmt(c.start) + "–" + fmt(c.end) +
+              (c.label ? "  " + c.label : "") +
+              (c.confidence != null ? "  conf " + c.confidence : "") +
+              (c.skippable ? "  (skippable)" : "  (not skippable)");
+    bar.insertBefore(d, $("#played"));
+  }
+  $("#t1").textContent = fmt(duration);
+}
+
+function drawTable() {
+  const tb = $("#cues tbody");
+  tb.innerHTML = "";
+  const cur = eventAt(now());
+  for (const c of track.cues) {
+    const tr = document.createElement("tr");
+    if (cur && cur.id === c.id) tr.className = "now";
+    const cls = c.type === "PROGRAM" ? "program" : (c.state === "ad" ? "ad" : "uncertain");
+    tr.innerHTML =
+      "<td>" + c.id + "</td>" +
+      "<td class='t'>" + fmt(c.start) + "</td>" +
+      "<td class='t'>" + fmt(c.end) + "</td>" +
+      "<td><span class='pill " + cls + "'>" + c.type + "</span></td>" +
+      "<td class='t'>" + (c.confidence != null ? c.confidence.toFixed(2) : "—") + "</td>" +
+      "<td class='t'>" + (c.skippable ? "yes" : "no") + "</td>" +
+      "<td>" + (c.label || "") + (c.note ? " <span class='note'>· " + c.note + "</span>" : "") + "</td>";
+    tr.onclick = () => seek(c.start, true);
+    tb.appendChild(tr);
+  }
+  const h = track.header || {};
+  $("#hdr").textContent = "header: " + (h.profile || "?") +
+    " · status " + (h.status || "?") +
+    " · classifier " + ((h.classifier && h.classifier.model) || "?") +
+    " · thresholds ad≥" + ((h.thresholds && h.thresholds.ad) ?? "?") +
+    " · " + track.cues.length + " cue(s)" +
+    (track.errors.length ? " · " + track.errors.length + " parse error(s)" : "");
+}
+
+function paint() {
+  const t = now();
+  $("#played").style.width = (100 * t / duration) + "%";
+  $("#head").style.left = (100 * t / duration) + "%";
+  $("#clock").textContent = fmt(t) + " / " + fmt(duration);
+
+  const ev = eventAt(t);
+  const box = $("#status");
+  box.className = "status" + (ev ? " " + (ev.state === "ad" ? "ad" : "uncertain") : "");
+  if (!ev) {
+    $("#statusMain").textContent = "Program";
+    $("#statusWhy").textContent = "No marking at this position.";
+    $("#skip").disabled = true;
+  } else {
+    $("#statusMain").textContent = ev.type + (ev.label ? " — " + ev.label : "") +
+      "  (" + fmt(ev.end - t) + " left)";
+    $("#statusWhy").textContent = ev.skippable
+      ? "confidence " + ev.confidence + ", state " + ev.state + ", edges " +
+        ((ev.edges && ev.edges.mode) || "segment") + " — skippable."
+      : "confidence " + ev.confidence + ", state " + ev.state +
+        " — below the ad threshold, so this is shown but never skipped" +
+        (ev.note ? " (" + ev.note + ")" : ".");
+    $("#skip").disabled = !ev.skippable;
+  }
+}
+
+/* ------------------------------------------------------------- playback -- */
+function seek(t, manual) {
+  t = Math.max(0, Math.min(duration, t));
+  if (media) media.currentTime = t; else demoT = t;
+  // Every manual seek arms a guard, so a deliberate move into an ad is
+  // honoured rather than fought by auto-skip.
+  if (manual) seekGuardUntil = Date.now() + 4000;
+  armAutoSkip();
+  paint(); drawTable();
+}
+
+/* Auto-skip is a wall-clock timer aimed at the boundary, not timeupdate
+   polling. timeupdate fires ~4x/s and would leak a fraction of every break.
+   The timer accounts for playbackRate. */
+function armAutoSkip() {
+  clearTimeout(skipTimer); skipTimer = null;
+  if (!$("#auto").checked || !playing) return;
+  const t = now(), ev = eventAt(t);
+  let target = null, when = 0;
+  if (ev && ev.skippable) { target = ev; when = 0; }
+  else {
+    for (const c of track.cues) if (c.start > t && c.skippable) { target = c; when = (c.start - t) / rate() * 1000; break; }
+  }
+  if (!target) return;
+  skipTimer = setTimeout(() => {
+    if (Date.now() < seekGuardUntil) { armAutoSkip(); return; }
+    if (target.end >= duration - 0.25) { pause(); seek(duration, false); return; }  // trailing ad ends the episode
+    seek(target.end, false);
+  }, Math.max(0, when));
+}
+
+function tick(ts) {
+  if (!playing) return;
+  if (!media) {
+    if (lastTick) demoT = Math.min(duration, demoT + (ts - lastTick) / 1000 * rate());
+    lastTick = ts;
+    if (demoT >= duration) pause();
+  }
+  paint();
+  requestAnimationFrame(tick);
+}
+
+function play() {
+  playing = true; lastTick = 0; $("#play").textContent = "❚❚ Pause";
+  if (media) media.play().catch(() => {});
+  armAutoSkip(); requestAnimationFrame(tick);
+}
+function pause() {
+  playing = false; $("#play").textContent = "▶︎ Play";
+  clearTimeout(skipTimer); skipTimer = null;
+  if (media) media.pause();
+}
+
+/* ----------------------------------------------------------------- wire -- */
+$("#play").onclick = () => (playing ? pause() : play());
+$("#back").onclick = () => seek(now() - 15, true);
+$("#fwd").onclick  = () => seek(now() + 15, true);
+$("#skip").onclick = () => { const e = eventAt(now()); if (e && e.skippable) seek(e.end, false); };
+$("#auto").onchange = armAutoSkip;
+$("#bar").onclick = (e) => {
+  const r = $("#bar").getBoundingClientRect();
+  seek(duration * (e.clientX - r.left) / r.width, true);
+};
+addEventListener("keydown", (e) => {
+  if (e.key === " ") { e.preventDefault(); playing ? pause() : play(); }
+  if (e.key === "j") seek(now() - 15, true);
+  if (e.key === "l") seek(now() + 15, true);
+});
+
+const drop = $("#drop");
+drop.ondragover = (e) => { e.preventDefault(); drop.classList.add("hot"); };
+drop.ondragleave = () => drop.classList.remove("hot");
+drop.ondrop = async (e) => {
+  e.preventDefault(); drop.classList.remove("hot");
+  for (const f of e.dataTransfer.files) {
+    if (/\.(vtt)$/i.test(f.name)) {
+      track = parseAdVTT(await f.text());
+      if (track.header && track.header.media_duration_sec && !media)
+        duration = track.header.media_duration_sec;
+      if (track.errors.length) console.warn("AdVTT parse errors", track.errors);
+      drawRegions(); drawTable(); paint();
+    } else if (f.type.startsWith("audio/") || f.type.startsWith("video/")) {
+      const el = document.createElement(f.type.startsWith("video/") ? "video" : "audio");
+      el.controls = true; el.src = URL.createObjectURL(f);
+      $("#mediaHost").innerHTML = ""; $("#mediaHost").appendChild(el);
+      media = el; $("#turbo").disabled = true;
+      el.onloadedmetadata = () => { duration = el.duration; drawRegions(); paint(); };
+      el.onseeked = () => { seekGuardUntil = Date.now() + 4000; armAutoSkip(); };
+      el.onplay = () => { playing = true; $("#play").textContent = "❚❚ Pause"; armAutoSkip(); requestAnimationFrame(tick); };
+      el.onpause = pause;
+    }
+  }
+};
+
+drawRegions(); drawTable(); paint();
+</script>

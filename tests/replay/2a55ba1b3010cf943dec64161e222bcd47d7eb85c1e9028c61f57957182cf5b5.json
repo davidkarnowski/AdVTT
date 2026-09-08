@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 856,
+    "end_index": 856,
+    "kind": "house",
+    "confidence": 0.8,
+    "evidence": "Ad Free, you can do that. It's very simple. Just become a premium member",
+    "end_evidence": "Ad Free, you can do that. It's very simple. Just become a premium member"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":856,\"end_index\":856,\"kind\":\"house\",\"confidence\":0.8,\"evidence\":\"Ad Free, you can do that. It's very simple. Just become a premium member\",\"end_evidence\":\"Ad Free, you can do that. It's very simple. Just become a premium member\"}]}",
+ "meta": {
+  "wall_sec": 17.19,
+  "prompt_tokens": 2,
+  "completion_tokens": 1266,
+  "thinking_tokens": 1110,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 11009,
+  "cost_usd": 0.0648122,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

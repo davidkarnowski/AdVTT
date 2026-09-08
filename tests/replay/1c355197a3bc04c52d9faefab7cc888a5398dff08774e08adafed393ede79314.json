@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-opus-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 105,
+    "end_index": 134,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here.",
+    "end_evidence": "You can check out the risks and benefits at springsleep.com."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":105,\"end_index\":134,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here.\",\"end_evidence\":\"You can check out the risks and benefits at springsleep.com.\"}]}",
+ "meta": {
+  "wall_sec": 3.67,
+  "prompt_tokens": 2,
+  "completion_tokens": 139,
+  "thinking_tokens": 0,
+  "cache_read_tokens": 7249,
+  "cache_write_tokens": 13966,
+  "cost_usd": 0.1531935,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

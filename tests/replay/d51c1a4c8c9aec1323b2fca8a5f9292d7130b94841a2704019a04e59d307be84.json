@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 4511,
+    "end_index": 4529,
+    "kind": "postroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by Blue Chew.",
+    "end_evidence": "Visit bluechew.com for more details and important safety information."
+   },
+   {
+    "start_index": 4530,
+    "end_index": 4559,
+    "kind": "postroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by the farmer's dog.",
+    "end_evidence": "This offer is for new customers only."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":4511,\"end_index\":4529,\"kind\":\"postroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by Blue Chew.\",\"end_evidence\":\"Visit bluechew.com for more details and important safety information.\"},{\"start_index\":4530,\"end_index\":4559,\"kind\":\"postroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by the farmer's dog.\",\"end_evidence\":\"This offer is for new customers only.\"}]}",
+ "meta": {
+  "wall_sec": 7.88,
+  "prompt_tokens": 2,
+  "completion_tokens": 604,
+  "thinking_tokens": 376,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 9537,
+  "cost_usd": 0.0506342,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

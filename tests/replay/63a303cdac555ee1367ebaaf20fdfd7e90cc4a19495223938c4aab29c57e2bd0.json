@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 3172,
+    "end_index": 3184,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "this episode is brought to you by blue chew i'm sure you've heard of blue chew by now",
+    "end_evidence": "Visit bluechew.com for more details and important safety information."
+   },
+   {
+    "start_index": 3185,
+    "end_index": 3212,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by Chime.",
+    "end_evidence": "For more details."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":3172,\"end_index\":3184,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"this episode is brought to you by blue chew i'm sure you've heard of blue chew by now\",\"end_evidence\":\"Visit bluechew.com for more details and important safety information.\"},{\"start_index\":3185,\"end_index\":3212,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by Chime.\",\"end_evidence\":\"For more details.\"}]}",
+ "meta": {
+  "wall_sec": 22.2,
+  "prompt_tokens": 2,
+  "completion_tokens": 1892,
+  "thinking_tokens": 1662,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 14090,
+  "cost_usd": 0.0855482,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

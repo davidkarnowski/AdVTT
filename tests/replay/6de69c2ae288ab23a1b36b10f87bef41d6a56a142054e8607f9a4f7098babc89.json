@@ -1,0 +1,46 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 217,
+    "end_index": 246,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "The wait is over.",
+    "end_evidence": "Terms at dkng.co.offer."
+   },
+   {
+    "start_index": 247,
+    "end_index": 279,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by the Farmer's Dog.",
+    "end_evidence": "This offer is for new customers only."
+   },
+   {
+    "start_index": 280,
+    "end_index": 302,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by Eight Sleep.",
+    "end_evidence": "8sleep.com slash ROGAN."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":217,\"end_index\":246,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"The wait is over.\",\"end_evidence\":\"Terms at dkng.co.offer.\"},{\"start_index\":247,\"end_index\":279,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by the Farmer's Dog.\",\"end_evidence\":\"This offer is for new customers only.\"},{\"start_index\":280,\"end_index\":302,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by Eight Sleep.\",\"end_evidence\":\"8sleep.com slash ROGAN.\"}]}",
+ "meta": {
+  "wall_sec": 16.43,
+  "prompt_tokens": 2,
+  "completion_tokens": 1549,
+  "thinking_tokens": 1207,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 12804,
+  "cost_usd": 0.0763112,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

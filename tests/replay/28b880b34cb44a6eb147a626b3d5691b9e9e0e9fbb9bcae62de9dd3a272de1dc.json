@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 345,
+    "end_index": 352,
+    "kind": "preroll",
+    "confidence": 0.95,
+    "evidence": "Over 1 million businesses have used ShipStation to save time,",
+    "end_evidence": "code JRE."
+   },
+   {
+    "start_index": 611,
+    "end_index": 640,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This episode is brought to you by Ketone IQ.",
+    "end_evidence": "So go ahead and take your shot."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":345,\"end_index\":352,\"kind\":\"preroll\",\"confidence\":0.95,\"evidence\":\"Over 1 million businesses have used ShipStation to save time,\",\"end_evidence\":\"code JRE.\"},{\"start_index\":611,\"end_index\":640,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This episode is brought to you by Ketone IQ.\",\"end_evidence\":\"So go ahead and take your shot.\"}]}",
+ "meta": {
+  "wall_sec": 6.86,
+  "prompt_tokens": 2,
+  "completion_tokens": 512,
+  "thinking_tokens": 296,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 12617,
+  "cost_usd": 0.0657012,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

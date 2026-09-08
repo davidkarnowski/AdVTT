@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 3956,
+    "end_index": 3975,
+    "kind": "postroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by the farmer's dog.",
+    "end_evidence": "which helps avoid overfeeding and makes weight management easier and isn't getting more time with our four-legged best friend."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":3956,\"end_index\":3975,\"kind\":\"postroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by the farmer's dog.\",\"end_evidence\":\"which helps avoid overfeeding and makes weight management easier and isn't getting more time with our four-legged best friend.\"}]}",
+ "meta": {
+  "wall_sec": 10.86,
+  "prompt_tokens": 2,
+  "completion_tokens": 714,
+  "thinking_tokens": 548,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 14275,
+  "cost_usd": 0.0747562,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

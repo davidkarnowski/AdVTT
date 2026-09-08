@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 898,
+    "end_index": 915,
+    "kind": "midroll",
+    "confidence": 0.98,
+    "evidence": "This episode is brought to you by uber eats big news",
+    "end_evidence": "See app for details."
+   },
+   {
+    "start_index": 916,
+    "end_index": 929,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "AG1 has been a longtime partner of the show.",
+    "end_evidence": "CAHMB for muscle protection and zinc carnosine for your gut lining."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":898,\"end_index\":915,\"kind\":\"midroll\",\"confidence\":0.98,\"evidence\":\"This episode is brought to you by uber eats big news\",\"end_evidence\":\"See app for details.\"},{\"start_index\":916,\"end_index\":929,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"AG1 has been a longtime partner of the show.\",\"end_evidence\":\"CAHMB for muscle protection and zinc carnosine for your gut lining.\"}]}",
+ "meta": {
+  "wall_sec": 8.29,
+  "prompt_tokens": 2,
+  "completion_tokens": 577,
+  "thinking_tokens": 352,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 13822,
+  "cost_usd": 0.0712092,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

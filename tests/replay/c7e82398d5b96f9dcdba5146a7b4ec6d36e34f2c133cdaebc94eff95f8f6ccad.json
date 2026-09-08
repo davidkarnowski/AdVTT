@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-opus-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 636,
+    "end_index": 636,
+    "kind": "house",
+    "confidence": 0.9,
+    "evidence": "to listen to the podcast of this show ad free",
+    "end_evidence": "just become a premium member of the"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":636,\"end_index\":636,\"kind\":\"house\",\"confidence\":0.9,\"evidence\":\"to listen to the podcast of this show ad free\",\"end_evidence\":\"just become a premium member of the\"}]}",
+ "meta": {
+  "wall_sec": 5.49,
+  "prompt_tokens": 2,
+  "completion_tokens": 289,
+  "thinking_tokens": 158,
+  "cache_read_tokens": 7249,
+  "cache_write_tokens": 10408,
+  "cost_usd": 0.1191415,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

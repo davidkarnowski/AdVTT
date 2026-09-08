@@ -1,0 +1,28 @@
+# secrets and local config
+.env
+.env.*
+keys.json
+# python
+__pycache__/
+*.pyc
+.venv/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+# macOS
+.DS_Store
+# large media: the research episode is kept out of git; see Research/11-*.md
+Research/*.m4a
+Research/*.mp3
+# local runs
+*.advtt.json
+*.analysis.json
+!examples/*.json
+eval-out/
+
+# overnight working data (audio, transcripts of copyrighted episodes)
+data/
+
+# local research notes and prompts not meant for the public repo
+Research/local/

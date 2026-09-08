@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 2305,
+    "end_index": 2326,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by Tocovas.",
+    "end_evidence": "off at tecovas.com slash rogan when you sign up for email and text."
+   },
+   {
+    "start_index": 2327,
+    "end_index": 2349,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by Visible.",
+    "end_evidence": "See visible.com for plan features and network management details."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":2305,\"end_index\":2326,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by Tocovas.\",\"end_evidence\":\"off at tecovas.com slash rogan when you sign up for email and text.\"},{\"start_index\":2327,\"end_index\":2349,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by Visible.\",\"end_evidence\":\"See visible.com for plan features and network management details.\"}]}",
+ "meta": {
+  "wall_sec": 10.53,
+  "prompt_tokens": 4,
+  "completion_tokens": 663,
+  "thinking_tokens": 203,
+  "cache_read_tokens": 40544,
+  "cache_write_tokens": 14871,
+  "cost_usd": 0.0823078,
+  "stop_reason": "tool_use",
+  "num_turns": 3,
+  "effort": null
+ }
+}

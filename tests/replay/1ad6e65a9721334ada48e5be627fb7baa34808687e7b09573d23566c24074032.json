@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-haiku-4-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 856,
+    "end_index": 856,
+    "kind": "house",
+    "confidence": 0.95,
+    "evidence": "Just become a premium member of the President's Daily",
+    "end_evidence": "become a premium member of the President's Daily"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":856,\"end_index\":856,\"kind\":\"house\",\"confidence\":0.95,\"evidence\":\"Just become a premium member of the President's Daily\",\"end_evidence\":\"become a premium member of the President's Daily\"}]}",
+ "meta": {
+  "wall_sec": 78.94,
+  "prompt_tokens": 10,
+  "completion_tokens": 7650,
+  "thinking_tokens": 7160,
+  "cache_read_tokens": 9507,
+  "cache_write_tokens": 8467,
+  "cost_usd": 0.06163570000000001,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

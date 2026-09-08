@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-haiku-4-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 2171,
+    "end_index": 2186,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This episode is brought to you by Zip Recruiter.",
+    "end_evidence": "that's ZipRecruiter.com slash Rogan."
+   },
+   {
+    "start_index": 2187,
+    "end_index": 2209,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This episode is sponsored by BetterHelp.",
+    "end_evidence": "That's betterhelp.com."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":2171,\"end_index\":2186,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This episode is brought to you by Zip Recruiter.\",\"end_evidence\":\"that's ZipRecruiter.com slash Rogan.\"},{\"start_index\":2187,\"end_index\":2209,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This episode is sponsored by BetterHelp.\",\"end_evidence\":\"That's betterhelp.com.\"}]}",
+ "meta": {
+  "wall_sec": 37.15,
+  "prompt_tokens": 10,
+  "completion_tokens": 3431,
+  "thinking_tokens": 2905,
+  "cache_read_tokens": 9507,
+  "cache_write_tokens": 12055,
+  "cost_usd": 0.0501727,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

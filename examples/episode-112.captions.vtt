@@ -1,0 +1,36 @@
+WEBVTT
+NOTE ADVTT/0.1 amended
+{"profile":"advtt/0.1","amended":true,"source":"episode-112.captions.vtt",
+ "source_sha256":"1b77a0…","events":"episode-112.media-events.vtt",
+ "generated":"2026-09-01T09:14:02Z",
+ "policy":"cue text and timings are byte-identical to the source; every AdVTT marking is carried in NOTE blocks, which conforming WebVTT parsers discard, so rendering is unchanged; deleting every NOTE ADVTT block restores the original exactly"}
+
+195
+00:12:20.480 --> 00:12:24.960
+…which is where the whole procurement story
+actually starts to make sense.
+
+196
+00:12:25.100 --> 00:12:31.240
+And we'll pick that up after this.
+
+NOTE ADVTT enter ad-001
+{"type":"ADVERTISEMENT","confidence":0.98,"state":"ad","skippable":true,"at":751.24,"split":{"cue":"197","at":751.24,"ad_side":"after"}}
+
+197
+00:12:29.900 --> 00:12:36.400
+Support for this show comes from Acme,
+makers of the Widget Pro.
+
+198
+00:12:36.400 --> 00:12:44.020
+Acme has been building tools for people who
+build things since 1974.
+
+NOTE ADVTT exit ad-001
+{"type":"ADVERTISEMENT","id":"ad-001","at":779.80}
+
+247
+00:13:00.100 --> 00:13:06.640
+So — procurement. You were saying the contract
+was already signed.

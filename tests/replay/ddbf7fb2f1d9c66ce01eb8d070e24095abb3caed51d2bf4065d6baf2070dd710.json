@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 85,
+    "end_index": 98,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "Hey, Mike Baker here. Let me take just a moment to talk about good health",
+    "end_evidence": "Dosedaily.co.pdb, but 35% off your first month's subscription"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":85,\"end_index\":98,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"Hey, Mike Baker here. Let me take just a moment to talk about good health\",\"end_evidence\":\"Dosedaily.co.pdb, but 35% off your first month's subscription\"}]}",
+ "meta": {
+  "wall_sec": 8.73,
+  "prompt_tokens": 2,
+  "completion_tokens": 519,
+  "thinking_tokens": 357,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 25384,
+  "cost_usd": 0.113094,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

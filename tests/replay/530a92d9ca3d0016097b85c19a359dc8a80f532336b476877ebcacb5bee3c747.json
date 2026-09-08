@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 366,
+    "end_index": 369,
+    "kind": "midroll",
+    "confidence": 0.92,
+    "evidence": "and let Traeger handle the rest.",
+    "end_evidence": "check out Traeger Grills."
+   },
+   {
+    "start_index": 671,
+    "end_index": 690,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "Take your training to the next level with AG1's new product,",
+    "end_evidence": "That's drinkag1.com slash joerogan."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":366,\"end_index\":369,\"kind\":\"midroll\",\"confidence\":0.92,\"evidence\":\"and let Traeger handle the rest.\",\"end_evidence\":\"check out Traeger Grills.\"},{\"start_index\":671,\"end_index\":690,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"Take your training to the next level with AG1's new product,\",\"end_evidence\":\"That's drinkag1.com slash joerogan.\"}]}",
+ "meta": {
+  "wall_sec": 14.24,
+  "prompt_tokens": 2,
+  "completion_tokens": 876,
+  "thinking_tokens": 659,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 13689,
+  "cost_usd": 0.0735622,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

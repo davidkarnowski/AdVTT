@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "advtt"
+version = "0.1.0.dev0"
+description = "Time-resolved advertising disclosure for finished media: finds ad and sponsorship spans in a transcript and writes a portable, typed record."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = []
+keywords = ["podcast", "advertising", "sponsorship", "transcript", "webvtt", "chapters"]
+authors = [{ name = "David Karnowski" }]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Operating System :: OS Independent",
+  "Topic :: Multimedia :: Sound/Audio :: Analysis",
+]
+
+[project.urls]
+Repository = "https://github.com/davidkarnowski/AdVTT"
+Issues = "https://github.com/davidkarnowski/AdVTT/issues"
+
+[project.optional-dependencies]
+mlx = ["mlx-whisper"]
+parakeet = ["parakeet-mlx"]
+audio = ["numpy", "soundfile"]
+dev = ["pytest"]
+
+[project.scripts]
+advtt = "advtt.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/advtt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

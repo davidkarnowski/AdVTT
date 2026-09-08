@@ -1,0 +1,46 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-haiku-4-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 177,
+    "end_index": 190,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "you do enjoy the occasional night out, right? But I suspect",
+    "end_evidence": "when Monday hits. Remember, zbiotics.com slash PDB code PDB"
+   },
+   {
+    "start_index": 191,
+    "end_index": 202,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here with a word about personal health and weight loss",
+    "end_evidence": "discount. That's promo code PDB at takeleane.com"
+   },
+   {
+    "start_index": 248,
+    "end_index": 251,
+    "kind": "postroll",
+    "confidence": 0.94,
+    "evidence": "Give it a try at midmobile.com slash switch. Up from payment",
+    "end_evidence": "See terms"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":177,\"end_index\":190,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"you do enjoy the occasional night out, right? But I suspect\",\"end_evidence\":\"when Monday hits. Remember, zbiotics.com slash PDB code PDB\"},{\"start_index\":191,\"end_index\":202,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here with a word about personal health and weight loss\",\"end_evidence\":\"discount. That's promo code PDB at takeleane.com\"},{\"start_index\":248,\"end_index\":251,\"kind\":\"postroll\",\"confidence\":0.94,\"evidence\":\"Give it a try at midmobile.com slash switch. Up from payment\",\"end_evidence\":\"See terms\"}]}",
+ "meta": {
+  "wall_sec": 169.86,
+  "prompt_tokens": 10,
+  "completion_tokens": 16546,
+  "thinking_tokens": 15875,
+  "cache_read_tokens": 9507,
+  "cache_write_tokens": 7074,
+  "cost_usd": 0.1016447,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

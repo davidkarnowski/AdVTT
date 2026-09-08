@@ -1,0 +1,195 @@
+{
+ "episode": "2026-08-27_1700_2547_Daniel_Everett",
+ "guid": "9e1fb742-a1b8-11f1-9e55-d7d5779b3db3",
+ "source": "megaphone-stitch-map",
+ "sha256": "f32d8d07dd7c83a7d0e5605e0ee5cab9d0a7e48163d70a6fbc221901eb621da2",
+ "bytes": 143274910,
+ "delivery": "inserted",
+ "bitrate_bps": 112000,
+ "spans_time": [
+  {
+   "start": 540.447,
+   "end": 600.529,
+   "slot": "pre",
+   "campaign": "25d21110-a34b-11f1-ac78-bfb54c9a1df3",
+   "ad_id": "171ddbfc-e048-11f0-a677-33ef2b478a28"
+  },
+  {
+   "start": 600.529,
+   "end": 678.165,
+   "slot": "pre",
+   "campaign": "7f9c3b8a-7565-11f1-8f10-13240dd57ae0",
+   "ad_id": "432f7dd2-5522-11f1-87b6-57f542a149d7"
+  },
+  {
+   "start": 678.165,
+   "end": 711.471,
+   "slot": "pre",
+   "campaign": "f874a586-a54b-11f1-8552-db28f6afbe6d",
+   "ad_id": "750901ca-2485-11f1-b15b-4be073e9dabf"
+  },
+  {
+   "start": 2275.03,
+   "end": 2320.927,
+   "slot": "mid",
+   "campaign": "50f05210-9033-11f1-aaa1-6bc7eb5e674a",
+   "ad_id": "d6356822-9031-11f1-ab3e-f30a7af0c848"
+  },
+  {
+   "start": 2320.927,
+   "end": 2379.102,
+   "slot": "mid",
+   "campaign": "21c047e4-9ff0-11f1-b46a-6b0c69dc3281",
+   "ad_id": "36932bfa-d291-11f0-890f-5774e6c96565"
+  },
+  {
+   "start": 4632.294,
+   "end": 4690.886,
+   "slot": "mid",
+   "campaign": "144bd18a-7414-11f1-9555-d3fce5941386",
+   "ad_id": "066708a0-f00c-11f0-9cd2-1344e060cdcc"
+  },
+  {
+   "start": 4690.886,
+   "end": 4751.987,
+   "slot": "mid",
+   "campaign": "1cf75682-718b-11f1-9b90-3b1dc6b5514a",
+   "ad_id": "bd7ee07e-dabf-11f0-b686-e3e836cd1a30"
+  },
+  {
+   "start": 5804.774,
+   "end": 5864.855,
+   "slot": "mid",
+   "campaign": "f7a14950-81e9-11f1-98ab-3338371f0a0b",
+   "ad_id": "e9c7a356-816c-11f1-9906-e710c89c3625"
+  },
+  {
+   "start": 5864.855,
+   "end": 5935.595,
+   "slot": "mid",
+   "campaign": "be627a36-7ae8-11f1-8702-c781b3e8772a",
+   "ad_id": "1a0ae750-7ac7-11f1-b56a-47051dfbd5c9"
+  },
+  {
+   "start": 7874.455,
+   "end": 7937.959,
+   "slot": "mid",
+   "campaign": "f28cb51a-a586-11f1-8c24-ab2af58fe742",
+   "ad_id": "a08f1e8c-9b05-11f1-98d2-3bd39056a4b8"
+  },
+  {
+   "start": 7937.959,
+   "end": 7975.262,
+   "slot": "mid",
+   "campaign": "882500b2-73b1-11f1-8387-c391a589f384",
+   "ad_id": "5a2c8e06-555b-11f1-8318-03117f6730d5"
+  },
+  {
+   "start": 10094.994,
+   "end": 10172.63,
+   "slot": "post",
+   "campaign": "971c89f4-7565-11f1-b487-5fd00109170f",
+   "ad_id": "45462b20-5522-11f1-a64a-b3e223dd5ee4"
+  },
+  {
+   "start": 10172.63,
+   "end": 10229.655,
+   "slot": "post",
+   "campaign": "b5e4cd6a-59ea-11f1-8da1-cfb41b4c8f75",
+   "ad_id": "8a5b0446-55f0-11f1-94a2-13dd0909a18f"
+  }
+ ],
+ "breaks": [
+  {
+   "start": 540.447,
+   "end": 711.471,
+   "creatives": 3,
+   "slots": [
+    "pre"
+   ]
+  },
+  {
+   "start": 2275.03,
+   "end": 2379.102,
+   "creatives": 2,
+   "slots": [
+    "mid"
+   ]
+  },
+  {
+   "start": 4632.294,
+   "end": 4751.987,
+   "creatives": 2,
+   "slots": [
+    "mid"
+   ]
+  },
+  {
+   "start": 5804.774,
+   "end": 5935.595,
+   "creatives": 2,
+   "slots": [
+    "mid"
+   ]
+  },
+  {
+   "start": 7874.455,
+   "end": 7975.262,
+   "creatives": 2,
+   "slots": [
+    "mid"
+   ]
+  },
+  {
+   "start": 10094.994,
+   "end": 10229.655,
+   "creatives": 2,
+   "slots": [
+    "post"
+   ]
+  }
+ ],
+ "inserted_seconds": 761.1,
+ "notes": [
+  "Inserted creatives only, from the Megaphone stitch map of this exact copy (sha256 above). Host-read ads are not included; a complete truth file needs human review of the transcript."
+ ],
+ "segment_count": 5109,
+ "spans": [
+  {
+   "start_index": 294,
+   "end_index": 369,
+   "kind": "preroll",
+   "delivery": "inserted"
+  },
+  {
+   "start_index": 1138,
+   "end_index": 1180,
+   "kind": "midroll",
+   "delivery": "inserted"
+  },
+  {
+   "start_index": 2350,
+   "end_index": 2397,
+   "kind": "midroll",
+   "delivery": "inserted"
+  },
+  {
+   "start_index": 2953,
+   "end_index": 3002,
+   "kind": "midroll",
+   "delivery": "inserted"
+  },
+  {
+   "start_index": 3962,
+   "end_index": 3998,
+   "kind": "midroll",
+   "delivery": "inserted"
+  },
+  {
+   "start_index": 5058,
+   "end_index": 5108,
+   "kind": "postroll",
+   "delivery": "inserted"
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-haiku-4-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 2255,
+    "end_index": 2265,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This episode is brought to you by Sleep Doctor.",
+    "end_evidence": "Visit sleepdoctor.com for details."
+   },
+   {
+    "start_index": 2266,
+    "end_index": 2288,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This episode is brought to you by ShipStation.",
+    "end_evidence": "That's ShipStation.com code JRE."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":2255,\"end_index\":2265,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This episode is brought to you by Sleep Doctor.\",\"end_evidence\":\"Visit sleepdoctor.com for details.\"},{\"start_index\":2266,\"end_index\":2288,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This episode is brought to you by ShipStation.\",\"end_evidence\":\"That's ShipStation.com code JRE.\"}]}",
+ "meta": {
+  "wall_sec": 49.84,
+  "prompt_tokens": 10,
+  "completion_tokens": 4109,
+  "thinking_tokens": 3668,
+  "cache_read_tokens": 9507,
+  "cache_write_tokens": 10815,
+  "cost_usd": 0.0509647,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

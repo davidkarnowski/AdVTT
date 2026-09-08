@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 490,
+    "end_index": 507,
+    "kind": "midroll",
+    "confidence": 0.98,
+    "evidence": "This episode is brought to you by Visible.",
+    "end_evidence": "See visible.com for plan features and network management details."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":490,\"end_index\":507,\"kind\":\"midroll\",\"confidence\":0.98,\"evidence\":\"This episode is brought to you by Visible.\",\"end_evidence\":\"See visible.com for plan features and network management details.\"}]}",
+ "meta": {
+  "wall_sec": 4.92,
+  "prompt_tokens": 2,
+  "completion_tokens": 256,
+  "thinking_tokens": 120,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 13579,
+  "cost_usd": 0.06711120000000001,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

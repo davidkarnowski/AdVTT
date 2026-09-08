@@ -1,0 +1,46 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-opus-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 197,
+    "end_index": 202,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This episode is presented by Mandscape.",
+    "end_evidence": "Sale ends on August 11th."
+   },
+   {
+    "start_index": 203,
+    "end_index": 221,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "whatever you're watching, baseball, golf, soccer, racing, DraftKings has you covered",
+    "end_evidence": "Terms at DKNG.co slash predictions promo."
+   },
+   {
+    "start_index": 222,
+    "end_index": 246,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This episode is brought to you by the farmer's dog.",
+    "end_evidence": "This offers for new customers only."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":197,\"end_index\":202,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This episode is presented by Mandscape.\",\"end_evidence\":\"Sale ends on August 11th.\"},{\"start_index\":203,\"end_index\":221,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"whatever you're watching, baseball, golf, soccer, racing, DraftKings has you covered\",\"end_evidence\":\"Terms at DKNG.co slash predictions promo.\"},{\"start_index\":222,\"end_index\":246,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This episode is brought to you by the farmer's dog.\",\"end_evidence\":\"This offers for new customers only.\"}]}",
+ "meta": {
+  "wall_sec": 7.12,
+  "prompt_tokens": 2,
+  "completion_tokens": 444,
+  "thinking_tokens": 130,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 17400,
+  "cost_usd": 0.192046,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

@@ -1,0 +1,7 @@
+1
+00:12:31,200 --> 00:12:59,800
+[ADVERTISEMENT — Acme Corporation]
+
+2
+00:27:44,100 --> 00:28:14,000
+[SPONSORSHIP? — Example Company]

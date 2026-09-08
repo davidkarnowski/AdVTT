@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 334,
+    "end_index": 344,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here with a word about personal health and weight loss.",
+    "end_evidence": "with 20% off and free rush shipping so you can add lean to your healthy diet and exercise plan."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":334,\"end_index\":344,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here with a word about personal health and weight loss.\",\"end_evidence\":\"with 20% off and free rush shipping so you can add lean to your healthy diet and exercise plan.\"}]}",
+ "meta": {
+  "wall_sec": 11.4,
+  "prompt_tokens": 2,
+  "completion_tokens": 735,
+  "thinking_tokens": 570,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 12567,
+  "cost_usd": 0.0673602,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

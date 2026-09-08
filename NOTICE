@@ -1,0 +1,21 @@
+AdVTT
+Copyright 2026 David Karnowski
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Third-party data referenced by this project (not part of the licensed work)
+
+  SponsorBlock (https://sponsor.ajay.app), CC BY-NC-SA 4.0.
+  The pipeline does not use SponsorBlock data and does not need it. The
+  project used community sponsor segments only as an external reference
+  point when evaluating its own host-read timings on a handful of episodes
+  (research log, track L). No SponsorBlock data ships in this repository or
+  in the package; the "sponsorblock" export format is a file layout, not
+  data. Anyone reproducing that evaluation obtains the segments from
+  SponsorBlock under its own licence, for evaluation only.
+
+  Megaphone stitch maps. The x-megaphone-payload-2 response header is
+  published by the hosting service with every audio response; the project
+  records the decoded byte offsets of the copy it transcribed as factual
+  timing labels. No audio or transcript of any third-party episode is in
+  this repository.

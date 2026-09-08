@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 5183,
+    "end_index": 5184,
+    "kind": "postroll",
+    "confidence": 0.9,
+    "evidence": "This episode is brought to you by Blue Chew.",
+    "end_evidence": "I'm sure you've heard of Blue Chew by now,"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":5183,\"end_index\":5184,\"kind\":\"postroll\",\"confidence\":0.9,\"evidence\":\"This episode is brought to you by Blue Chew.\",\"end_evidence\":\"I'm sure you've heard of Blue Chew by now,\"}]}",
+ "meta": {
+  "wall_sec": 9.21,
+  "prompt_tokens": 2,
+  "completion_tokens": 677,
+  "thinking_tokens": 530,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 13599,
+  "cost_usd": 0.0717452,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

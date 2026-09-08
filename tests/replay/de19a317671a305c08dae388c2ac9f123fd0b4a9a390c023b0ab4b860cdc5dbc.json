@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-opus-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 90,
+    "end_index": 107,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "to talk to you about an incredibly important subject",
+    "end_evidence": "and benefits at springsleep.com"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":90,\"end_index\":107,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"to talk to you about an incredibly important subject\",\"end_evidence\":\"and benefits at springsleep.com\"}]}",
+ "meta": {
+  "wall_sec": 7.12,
+  "prompt_tokens": 2,
+  "completion_tokens": 368,
+  "thinking_tokens": 233,
+  "cache_read_tokens": 7249,
+  "cache_write_tokens": 13739,
+  "cost_usd": 0.1564815,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

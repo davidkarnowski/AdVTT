@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 930,
+    "end_index": 942,
+    "kind": "preroll",
+    "confidence": 0.9,
+    "evidence": "Because we all know how important it is to keep your gut happy and healthy.",
+    "end_evidence": "That's drinkag1.com slash joe."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":930,\"end_index\":942,\"kind\":\"preroll\",\"confidence\":0.9,\"evidence\":\"Because we all know how important it is to keep your gut happy and healthy.\",\"end_evidence\":\"That's drinkag1.com slash joe.\"}]}",
+ "meta": {
+  "wall_sec": 6.85,
+  "prompt_tokens": 2,
+  "completion_tokens": 315,
+  "thinking_tokens": 169,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 13976,
+  "cost_usd": 0.0693552,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

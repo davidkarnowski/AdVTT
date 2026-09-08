@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 1630,
+    "end_index": 1646,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by Chime.",
+    "end_evidence": "Go to chime.com slash disclosures for more details."
+   },
+   {
+    "start_index": 1647,
+    "end_index": 1661,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by Eight Sleep.",
+    "end_evidence": "That's code rogan at eightsleep.com slash rogan."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":1630,\"end_index\":1646,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by Chime.\",\"end_evidence\":\"Go to chime.com slash disclosures for more details.\"},{\"start_index\":1647,\"end_index\":1661,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by Eight Sleep.\",\"end_evidence\":\"That's code rogan at eightsleep.com slash rogan.\"}]}",
+ "meta": {
+  "wall_sec": 6.03,
+  "prompt_tokens": 2,
+  "completion_tokens": 423,
+  "thinking_tokens": 189,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 10531,
+  "cost_usd": 0.0569702,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

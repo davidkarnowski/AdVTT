@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 1737,
+    "end_index": 1760,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "AG1 has been a longtime partner of the show.",
+    "end_evidence": "Pro. That's drinkag1.com slash joe."
+   },
+   {
+    "start_index": 1761,
+    "end_index": 1787,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by Dodge.",
+    "end_evidence": "US LLC."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":1737,\"end_index\":1760,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"AG1 has been a longtime partner of the show.\",\"end_evidence\":\"Pro. That's drinkag1.com slash joe.\"},{\"start_index\":1761,\"end_index\":1787,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by Dodge.\",\"end_evidence\":\"US LLC.\"}]}",
+ "meta": {
+  "wall_sec": 7.89,
+  "prompt_tokens": 2,
+  "completion_tokens": 607,
+  "thinking_tokens": 398,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 14249,
+  "cost_usd": 0.0734832,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

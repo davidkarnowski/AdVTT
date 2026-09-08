@@ -1,0 +1,98 @@
+{
+ "schema_version": 1,
+ "kind": "ground_truth",
+ "episode": "2026-08-18_1000_August_18th_2026_Iran_s_Leaders_Are_Terrified_of_Another_Upr",
+ "segment_count": 252,
+ "duration_sec": 1354.6,
+ "labeled_by": "machine-draft: consensus of sonnet5-ladder2, opus5-ladder2, haiku45-ladder2 (>= 2 agree)",
+ "source": "machine-draft",
+ "status": "needs_human_review",
+ "spans": [
+  {
+   "start_index": 90,
+   "end_index": 107,
+   "kind": "midroll"
+  },
+  {
+   "start_index": 193,
+   "end_index": 216,
+   "kind": "midroll"
+  },
+  {
+   "start_index": 248,
+   "end_index": 249,
+   "kind": "house"
+  }
+ ],
+ "consensus_detail": [
+  {
+   "start_index": 90,
+   "end_index": 107,
+   "start": 450.56,
+   "end": 548.22,
+   "kind": "midroll",
+   "agreed_models": [
+    "sonnet5-ladder2",
+    "opus5-ladder2",
+    "haiku45-ladder2"
+   ],
+   "votes": 2,
+   "union_extent": {
+    "start_index": 89,
+    "end_index": 107,
+    "start": 444.8,
+    "end": 548.22
+   },
+   "disputed_seconds": 5.8
+  },
+  {
+   "start_index": 193,
+   "end_index": 216,
+   "start": 1034.04,
+   "end": 1169.2,
+   "kind": "midroll",
+   "agreed_models": [
+    "sonnet5-ladder2",
+    "opus5-ladder2",
+    "haiku45-ladder2"
+   ],
+   "votes": 3,
+   "union_extent": {
+    "start_index": 193,
+    "end_index": 216,
+    "start": 1034.04,
+    "end": 1169.2
+   },
+   "disputed_seconds": 0.0
+  },
+  {
+   "start_index": 248,
+   "end_index": 249,
+   "start": 1335.88,
+   "end": 1345.78,
+   "kind": "house",
+   "agreed_models": [
+    "sonnet5-ladder2",
+    "opus5-ladder2",
+    "haiku45-ladder2"
+   ],
+   "votes": 3,
+   "union_extent": {
+    "start_index": 248,
+    "end_index": 249,
+    "start": 1335.88,
+    "end": 1345.78
+   },
+   "disputed_seconds": 0.0
+  }
+ ],
+ "single_model_only": [],
+ "pairwise_jaccard_ad_seconds": {
+  "sonnet5-ladder2~opus5-ladder2": 1.0,
+  "sonnet5-ladder2~haiku45-ladder2": 0.936,
+  "opus5-ladder2~haiku45-ladder2": 0.936
+ },
+ "notes": [
+  "Draft produced by scripts/consensus.py; a human must confirm every span and resolve single_model_only regions before this becomes <stem>_ads.truth.json."
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "schema_version": 1,
+ "kind": "ground_truth",
+ "episode": "2026-08-08_1000_The_PDB_Situation_Report_August_8th_2026_The_Iran_War_Expose",
+ "segment_count": 639,
+ "duration_sec": 3614.1,
+ "labeled_by": "machine-draft: consensus of sonnet5-ladder2, opus5-ladder2, haiku45-ladder2 (>= 2 agree)",
+ "source": "machine-draft",
+ "status": "needs_human_review",
+ "spans": [
+  {
+   "start_index": 174,
+   "end_index": 189,
+   "kind": "midroll"
+  },
+  {
+   "start_index": 334,
+   "end_index": 344,
+   "kind": "midroll"
+  },
+  {
+   "start_index": 636,
+   "end_index": 636,
+   "kind": "house"
+  }
+ ],
+ "consensus_detail": [
+  {
+   "start_index": 174,
+   "end_index": 189,
+   "start": 761.12,
+   "end": 851.52,
+   "kind": "midroll",
+   "agreed_models": [
+    "sonnet5-ladder2",
+    "opus5-ladder2",
+    "haiku45-ladder2"
+   ],
+   "votes": 2,
+   "union_extent": {
+    "start_index": 173,
+    "end_index": 189,
+    "start": 755.24,
+    "end": 851.52
+   },
+   "disputed_seconds": 5.2
+  },
+  {
+   "start_index": 334,
+   "end_index": 344,
+   "start": 1721.48,
+   "end": 1779.0,
+   "kind": "midroll",
+   "agreed_models": [
+    "sonnet5-ladder2",
+    "opus5-ladder2",
+    "haiku45-ladder2"
+   ],
+   "votes": 2,
+   "union_extent": {
+    "start_index": 334,
+    "end_index": 345,
+    "start": 1721.48,
+    "end": 1786.06
+   },
+   "disputed_seconds": 6.6
+  },
+  {
+   "start_index": 636,
+   "end_index": 636,
+   "start": 3600.08,
+   "end": 3604.5,
+   "kind": "house",
+   "agreed_models": [
+    "sonnet5-ladder2",
+    "opus5-ladder2",
+    "haiku45-ladder2"
+   ],
+   "votes": 3,
+   "union_extent": {
+    "start_index": 636,
+    "end_index": 636,
+    "start": 3600.08,
+    "end": 3604.5
+   },
+   "disputed_seconds": 0.0
+  }
+ ],
+ "single_model_only": [],
+ "pairwise_jaccard_ad_seconds": {
+  "sonnet5-ladder2~opus5-ladder2": 0.925,
+  "sonnet5-ladder2~haiku45-ladder2": 0.916,
+  "opus5-ladder2~haiku45-ladder2": 0.847
+ },
+ "notes": [
+  "Draft produced by scripts/consensus.py; a human must confirm every span and resolve single_model_only regions before this becomes <stem>_ads.truth.json."
+ ]
+}

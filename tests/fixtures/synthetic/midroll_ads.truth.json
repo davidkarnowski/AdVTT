@@ -1,0 +1,14 @@
+{
+ "segment_count": 17,
+ "spans": [
+  {
+   "start_index": 9,
+   "end_index": 12,
+   "kind": "midroll",
+   "label": "Lumen Mattress"
+  }
+ ],
+ "notes": [
+  "synthetic: one host-read mid-roll; the 'coming up after this' handoff at 8 is content"
+ ]
+}

@@ -1,0 +1,46 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 81,
+    "end_index": 108,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "Hey, Mike Baker here, with a pro tip for dudes who want to dress well",
+    "end_evidence": "Quints.com."
+   },
+   {
+    "start_index": 109,
+    "end_index": 125,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "Hey, Mike Baker here, with a word about personal health and weight loss.",
+    "end_evidence": "That's promo code PDB at takelean.com."
+   },
+   {
+    "start_index": 178,
+    "end_index": 179,
+    "kind": "house",
+    "confidence": 0.9,
+    "evidence": "And to listen to the show ad-free, well, you can do that, it's very simple, just become",
+    "end_evidence": "a premium member of the President's Daily Brief by visiting PDBpremium.com."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":81,\"end_index\":108,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"Hey, Mike Baker here, with a pro tip for dudes who want to dress well\",\"end_evidence\":\"Quints.com.\"},{\"start_index\":109,\"end_index\":125,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"Hey, Mike Baker here, with a word about personal health and weight loss.\",\"end_evidence\":\"That's promo code PDB at takelean.com.\"},{\"start_index\":178,\"end_index\":179,\"kind\":\"house\",\"confidence\":0.9,\"evidence\":\"And to listen to the show ad-free, well, you can do that, it's very simple, just become\",\"end_evidence\":\"a premium member of the President's Daily Brief by visiting PDBpremium.com.\"}]}",
+ "meta": {
+  "wall_sec": 14.27,
+  "prompt_tokens": 2,
+  "completion_tokens": 1267,
+  "thinking_tokens": 921,
+  "cache_read_tokens": 21343,
+  "cache_write_tokens": 0,
+  "cost_usd": 0.0222746,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

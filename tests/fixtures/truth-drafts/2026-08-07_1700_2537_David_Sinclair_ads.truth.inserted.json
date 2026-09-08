@@ -1,0 +1,47 @@
+{
+ "episode": "2026-08-07_1700_2537_David_Sinclair",
+ "source": "hand-truth cross-checked against Megaphone stitch map",
+ "delivery": "inserted",
+ "segment_count": 3919,
+ "notes": [
+  "Which of the eight hand-labelled spans are stitched creatives comes from the fresh-stitch cross-check in Research/research-log/M-dai-check.md: six breaks match the x-megaphone-payload-2 map at the same content positions; the Superpower (1262.6 s) and BetterHelp (3400.0 s) reads have no map entry and are host-read. Indices are those of the hand truth, not a byte-exact map of this copy."
+ ],
+ "spans": [
+  {
+   "start_index": 197,
+   "end_index": 246,
+   "kind": "midroll",
+   "delivery": "inserted"
+  },
+  {
+   "start_index": 786,
+   "end_index": 811,
+   "kind": "midroll",
+   "delivery": "inserted"
+  },
+  {
+   "start_index": 1630,
+   "end_index": 1661,
+   "kind": "midroll",
+   "delivery": "inserted"
+  },
+  {
+   "start_index": 2255,
+   "end_index": 2288,
+   "kind": "midroll",
+   "delivery": "inserted"
+  },
+  {
+   "start_index": 3222,
+   "end_index": 3254,
+   "kind": "midroll",
+   "delivery": "inserted"
+  },
+  {
+   "start_index": 3865,
+   "end_index": 3918,
+   "kind": "postroll",
+   "delivery": "inserted"
+  }
+ ]
+}

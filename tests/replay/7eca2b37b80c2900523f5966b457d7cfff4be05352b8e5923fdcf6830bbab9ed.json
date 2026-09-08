@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 177,
+    "end_index": 202,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "you do enjoy the occasional night out, right",
+    "end_evidence": "discount. That's promo code PDB at takeleane.com."
+   },
+   {
+    "start_index": 247,
+    "end_index": 251,
+    "kind": "postroll",
+    "confidence": 0.9,
+    "evidence": "So there goes my big idea for the commercial.",
+    "end_evidence": "See terms."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":177,\"end_index\":202,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"you do enjoy the occasional night out, right\",\"end_evidence\":\"discount. That's promo code PDB at takeleane.com.\"},{\"start_index\":247,\"end_index\":251,\"kind\":\"postroll\",\"confidence\":0.9,\"evidence\":\"So there goes my big idea for the commercial.\",\"end_evidence\":\"See terms.\"}]}",
+ "meta": {
+  "wall_sec": 23.62,
+  "prompt_tokens": 2,
+  "completion_tokens": 1961,
+  "thinking_tokens": 1759,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 6250,
+  "cost_usd": 0.0510412,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

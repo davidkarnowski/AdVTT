@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-opus-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 3222,
+    "end_index": 3240,
+    "kind": "midroll",
+    "confidence": 0.96,
+    "evidence": "This episode is brought to you by Bluetchew,",
+    "end_evidence": "Bluetchew is number one for a reason."
+   },
+   {
+    "start_index": 3241,
+    "end_index": 3254,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This episode is brought to you by Snapdragon.",
+    "end_evidence": "of Qualcomm technologies and or its subsidiaries."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":3222,\"end_index\":3240,\"kind\":\"midroll\",\"confidence\":0.96,\"evidence\":\"This episode is brought to you by Bluetchew,\",\"end_evidence\":\"Bluetchew is number one for a reason.\"},{\"start_index\":3241,\"end_index\":3254,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This episode is brought to you by Snapdragon.\",\"end_evidence\":\"of Qualcomm technologies and or its subsidiaries.\"}]}",
+ "meta": {
+  "wall_sec": 6.93,
+  "prompt_tokens": 2,
+  "completion_tokens": 411,
+  "thinking_tokens": 179,
+  "cache_read_tokens": 7249,
+  "cache_write_tokens": 11690,
+  "cost_usd": 0.1387405,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

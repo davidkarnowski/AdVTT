@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 3962,
+    "end_index": 3985,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "AG1 has been a longtime partner of the show.",
+    "end_evidence": "Pro. That's drinkag1.com slash joe."
+   },
+   {
+    "start_index": 3986,
+    "end_index": 3998,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by Snapdragon.",
+    "end_evidence": "Snapdragon branded products are products of Qualcomm Technologies and or its subsidiaries."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":3962,\"end_index\":3985,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"AG1 has been a longtime partner of the show.\",\"end_evidence\":\"Pro. That's drinkag1.com slash joe.\"},{\"start_index\":3986,\"end_index\":3998,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by Snapdragon.\",\"end_evidence\":\"Snapdragon branded products are products of Qualcomm Technologies and or its subsidiaries.\"}]}",
+ "meta": {
+  "wall_sec": 9.1,
+  "prompt_tokens": 2,
+  "completion_tokens": 535,
+  "thinking_tokens": 287,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 14136,
+  "cost_usd": 0.0724562,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

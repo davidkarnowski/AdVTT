@@ -1,0 +1,46 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-opus-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 81,
+    "end_index": 108,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here, with a pro tip for dudes",
+    "end_evidence": "Quints.com."
+   },
+   {
+    "start_index": 109,
+    "end_index": 125,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here, with a word about personal health and weight loss.",
+    "end_evidence": "That's promo code PDB at takelean.com."
+   },
+   {
+    "start_index": 178,
+    "end_index": 178,
+    "kind": "house",
+    "confidence": 0.85,
+    "evidence": "And to listen to the show ad-free, well, you can do that",
+    "end_evidence": "just become"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":81,\"end_index\":108,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here, with a pro tip for dudes\",\"end_evidence\":\"Quints.com.\"},{\"start_index\":109,\"end_index\":125,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here, with a word about personal health and weight loss.\",\"end_evidence\":\"That's promo code PDB at takelean.com.\"},{\"start_index\":178,\"end_index\":178,\"kind\":\"house\",\"confidence\":0.85,\"evidence\":\"And to listen to the show ad-free, well, you can do that\",\"end_evidence\":\"just become\"}]}",
+ "meta": {
+  "wall_sec": 8.41,
+  "prompt_tokens": 2,
+  "completion_tokens": 564,
+  "thinking_tokens": 262,
+  "cache_read_tokens": 7249,
+  "cache_write_tokens": 9742,
+  "cost_usd": 0.1204915,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

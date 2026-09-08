@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-haiku-4-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 2786,
+    "end_index": 2795,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "ShipStation connects you with over 200 marketplaces",
+    "end_evidence": "code JRE."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":2786,\"end_index\":2795,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"ShipStation connects you with over 200 marketplaces\",\"end_evidence\":\"code JRE.\"}]}",
+ "meta": {
+  "wall_sec": 16.75,
+  "prompt_tokens": 10,
+  "completion_tokens": 1300,
+  "thinking_tokens": 945,
+  "cache_read_tokens": 9507,
+  "cache_write_tokens": 12090,
+  "cost_usd": 0.0395777,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

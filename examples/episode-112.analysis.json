@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "profile": "advtt/0.1",
+  "prompt_version": "2026-08-g",
+  "status": "ok",
+  "media": {"path": "episode-112.mp3", "duration_sec": 2412.4, "sha256": "e1a0…"},
+  "stt": {"provider": "whisper-mlx", "model": "mlx-community/whisper-small-mlx",
+          "timing": "model", "has_words": true, "segment_count": 812},
+  "classifier": {"provider": "openai", "model": "gpt-5.5", "chunk_tokens": 6000,
+                 "chunks": 4, "incomplete_chunks": 0, "retried_half_window": false},
+  "source_sha256": "9f2c4e…",
+  "generated": "2026-09-01T09:14:02Z",
+  "flags": "ccccc…aaaaa…ccccc",
+  "spans": [
+    {
+      "id": "ad-001", "type": "ADVERTISEMENT", "kind": "midroll",
+      "start_index": 197, "end_index": 246,
+      "start": 749.90, "end": 779.80,
+      "start_exact": 751.24, "end_exact": 779.80,
+      "edge_mode": "word",
+      "splits": [{"index": 197, "at": 751.24, "ad_side": "after"}],
+      "confidence": 0.98, "state": "ad",
+      "label": "Acme Corporation", "label_confidence": 0.82,
+      "evidence": "Support for this show comes from Acme, makers of the Widget Pro.",
+      "end_evidence": "Terms apply. See acme.example for details.",
+      "checks": {"evidence_verbatim": true, "question_density": 0.02, "duration_ok": true}
+    },
+    {
+      "id": "ad-002", "type": "SPONSORSHIP", "kind": "midroll",
+      "start_index": 541, "end_index": 552,
+      "start": 1664.10, "end": 1694.00,
+      "start_exact": 1664.10, "end_exact": 1694.00,
+      "edge_mode": "segment",
+      "confidence": 0.61, "state": "uncertain",
+      "label": "Example Company", "label_confidence": 0.55,
+      "evidence": "This episode is supported by Example Company.",
+      "checks": {"evidence_verbatim": false, "confidence_halved": true,
+                 "question_density": 0.05, "duration_ok": true}
+    }
+  ],
+  "stats": {"ad_spans": 2, "ad_segments": 61, "ad_seconds": 58.5, "ad_fraction": 0.024,
+            "uncertain_segments": 12},
+  "gates": {"max_ad_fraction": 0.35, "degenerate_span_fraction": 0.60, "passed": true},
+  "rejections": [
+    {"chunk": 2, "reason": "span 604-661 dropped: question density 0.31 reads as interview, not ad copy"}
+  ]
+}

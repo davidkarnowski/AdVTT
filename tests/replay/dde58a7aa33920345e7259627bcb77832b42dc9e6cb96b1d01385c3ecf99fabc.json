@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 1138,
+    "end_index": 1156,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by Uber Eats.",
+    "end_evidence": "See app for details."
+   },
+   {
+    "start_index": 1157,
+    "end_index": 1180,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by LifeLock.",
+    "end_evidence": "off."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":1138,\"end_index\":1156,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by Uber Eats.\",\"end_evidence\":\"See app for details.\"},{\"start_index\":1157,\"end_index\":1180,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by LifeLock.\",\"end_evidence\":\"off.\"}]}",
+ "meta": {
+  "wall_sec": 8.05,
+  "prompt_tokens": 2,
+  "completion_tokens": 530,
+  "thinking_tokens": 325,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 14219,
+  "cost_usd": 0.0726912,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

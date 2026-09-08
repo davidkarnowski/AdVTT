@@ -1,0 +1,46 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 294,
+    "end_index": 325,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "The wait is over.",
+    "end_evidence": "Terms at dkng.co.offer."
+   },
+   {
+    "start_index": 326,
+    "end_index": 354,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by the Farmer's Dog.",
+    "end_evidence": "This offer is for new customers only."
+   },
+   {
+    "start_index": 355,
+    "end_index": 365,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This episode is brought to you by Traeger.",
+    "end_evidence": "put your food in,"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":294,\"end_index\":325,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"The wait is over.\",\"end_evidence\":\"Terms at dkng.co.offer.\"},{\"start_index\":326,\"end_index\":354,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by the Farmer's Dog.\",\"end_evidence\":\"This offer is for new customers only.\"},{\"start_index\":355,\"end_index\":365,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This episode is brought to you by Traeger.\",\"end_evidence\":\"put your food in,\"}]}",
+ "meta": {
+  "wall_sec": 10.59,
+  "prompt_tokens": 2,
+  "completion_tokens": 854,
+  "thinking_tokens": 571,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 13157,
+  "cost_usd": 0.0707562,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

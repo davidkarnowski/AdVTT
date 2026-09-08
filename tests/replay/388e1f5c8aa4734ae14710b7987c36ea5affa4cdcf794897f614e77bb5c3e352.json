@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-opus-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 786,
+    "end_index": 797,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "Uber Eats makes last-minute gifting easy.",
+    "end_evidence": "See app for details."
+   },
+   {
+    "start_index": 798,
+    "end_index": 811,
+    "kind": "midroll",
+    "confidence": 0.96,
+    "evidence": "This episode is sponsored by BetterHelp.",
+    "end_evidence": "That's better H-E-L-P.com."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":786,\"end_index\":797,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"Uber Eats makes last-minute gifting easy.\",\"end_evidence\":\"See app for details.\"},{\"start_index\":798,\"end_index\":811,\"kind\":\"midroll\",\"confidence\":0.96,\"evidence\":\"This episode is sponsored by BetterHelp.\",\"end_evidence\":\"That's better H-E-L-P.com.\"}]}",
+ "meta": {
+  "wall_sec": 6.18,
+  "prompt_tokens": 2,
+  "completion_tokens": 380,
+  "thinking_tokens": 166,
+  "cache_read_tokens": 7249,
+  "cache_write_tokens": 10850,
+  "cost_usd": 0.1291525,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

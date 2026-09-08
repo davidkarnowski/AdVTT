@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 474,
+    "end_index": 497,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "But what they're doing with Blue Chew Gold is completely next level.",
+    "end_evidence": "and the products being advertised are intended for a United States audience."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":474,\"end_index\":497,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"But what they're doing with Blue Chew Gold is completely next level.\",\"end_evidence\":\"and the products being advertised are intended for a United States audience.\"}]}",
+ "meta": {
+  "wall_sec": 11.1,
+  "prompt_tokens": 2,
+  "completion_tokens": 647,
+  "thinking_tokens": 499,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 13639,
+  "cost_usd": 0.07078620000000001,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

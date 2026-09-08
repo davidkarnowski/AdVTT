@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AdVTT player demo</title>
+<style>
+  :root {
+    --bg:#12141a; --fg:#e6e8ee; --dim:#8a92a6; --line:#262b36; --panel:#1b1f27;
+    --ad:#d8563f; --uncertain:#c9a227; --prog:#2f6f4f; --accent:#5b8dd6; --cue:#ffd166;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font:14px/1.5 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:1100px; margin:0 auto; padding:20px 16px 60px; }
+  h1 { font-size:18px; margin:0 0 4px; }
+  h2 { font-size:13px; margin:0 0 8px; color:var(--dim); font-weight:600; text-transform:uppercase; letter-spacing:.06em; }
+  .sub { color:var(--dim); margin:0 0 16px; }
+  .panel { border:1px solid var(--line); border-radius:8px; padding:14px 16px; margin:14px 0; }
+  .drop { border:1px dashed var(--line); border-radius:8px; padding:14px; color:var(--dim); text-align:center; }
+  .drop.hot { border-color:var(--accent); color:var(--fg); }
+  .pickers { display:flex; flex-wrap:wrap; gap:14px; margin-top:12px; }
+  .pickers label { display:flex; flex-direction:column; gap:4px; color:var(--dim); font-size:12.5px; min-width:220px; flex:1; }
+  .pickers input[type=file] { color:var(--fg); font:inherit; font-size:12.5px; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+  .chip { background:var(--panel); border:1px solid var(--line); border-radius:99px; padding:2px 10px; font-size:12.5px; color:var(--dim); }
+  .chip.on { color:var(--fg); border-color:var(--accent); }
+  #msg { color:var(--dim); font-size:12.5px; margin-top:8px; min-height:1.2em; }
+  #msg.err { color:var(--ad); }
+  video, audio { width:100%; display:block; background:#000; border-radius:6px; }
+  video.audio-only { height:150px; }
+  ::cue(.advtt-ad) { color:var(--cue); font-style:italic; }
+  .banner { display:none; margin-top:10px; padding:10px 12px; border-radius:6px; background:var(--panel);
+            border-left:4px solid var(--ad); align-items:center; gap:12px; flex-wrap:wrap; }
+  .banner.on { display:flex; }
+  .banner.uncertain { border-left-color:var(--uncertain); }
+  .badge { background:var(--ad); color:#fff; font-weight:800; letter-spacing:.08em; padding:4px 10px; border-radius:4px; font-size:13px; }
+  .banner.uncertain .badge { background:var(--uncertain); color:#1b1f27; }
+  .banner .title { font-weight:600; }
+  .banner .meta, .banner .left { color:var(--dim); font-size:12.5px; }
+  .banner .left { margin-left:auto; font-variant-numeric:tabular-nums; }
+  .bar { position:relative; height:34px; background:var(--panel); border-radius:5px; cursor:pointer; overflow:hidden; margin:12px 0 4px; outline:none; }
+  .bar:focus-visible { box-shadow:0 0 0 2px var(--accent); }
+  .region { position:absolute; top:0; bottom:0; }
+  .region.program { background:var(--prog); opacity:.35; }
+  .region.ad { background:var(--ad); opacity:.9; }
+  .region.uncertain { background:var(--uncertain); opacity:.9; }
+  .played { position:absolute; top:0; bottom:0; left:0; width:0; background:rgba(255,255,255,.12); pointer-events:none; }
+  .head { position:absolute; top:0; bottom:0; width:2px; background:#fff; pointer-events:none; }
+  .ticks { display:flex; justify-content:space-between; color:var(--dim); font-variant-numeric:tabular-nums; font-size:12px; }
+  .controls { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:10px; }
+  button { background:#222834; color:var(--fg); border:1px solid var(--line); border-radius:6px; padding:6px 12px; font:inherit; cursor:pointer; }
+  button:hover { border-color:var(--accent); }
+  button.primary { background:var(--ad); border-color:var(--ad); color:#fff; font-weight:600; }
+  button[disabled] { opacity:.4; cursor:default; }
+  label.chk { color:var(--dim); display:flex; gap:6px; align-items:center; cursor:pointer; font-size:13px; }
+  .clock { font-variant-numeric:tabular-nums; color:var(--dim); margin-left:auto; }
+  .stats { color:var(--dim); font-size:12.5px; margin-top:8px; }
+  .stats b { color:var(--fg); }
+  .cols { display:grid; grid-template-columns:2fr 1fr; gap:14px; }
+  @media (max-width:820px) { .cols { grid-template-columns:1fr; } }
+  ol.list { list-style:none; margin:0; padding:0; max-height:420px; overflow:auto; font-size:13px; }
+  ol.list li { display:flex; gap:10px; padding:5px 8px; border-bottom:1px solid var(--line); cursor:pointer; }
+  ol.list li:hover { background:var(--panel); }
+  ol.list li.now { background:#232a38; outline:1px solid var(--accent); }
+  ol.list li.ad { border-left:3px solid var(--ad); }
+  ol.list li.uncertain { border-left:3px solid var(--uncertain); }
+  ol.list li.ad .txt, ol.list li.uncertain .txt { color:var(--cue); font-style:italic; }
+  .t { font-variant-numeric:tabular-nums; color:var(--dim); white-space:nowrap; }
+  .pill { display:inline-block; padding:0 7px; border-radius:99px; font-size:11px; font-weight:600; margin-left:auto; white-space:nowrap; }
+  .pill.ad { background:var(--ad); color:#fff; }
+  .pill.uncertain { background:var(--uncertain); color:#1b1f27; }
+  .pill.program { background:var(--prog); color:#fff; }
+  .empty { color:var(--dim); font-size:13px; padding:8px; }
+  .note { color:var(--dim); font-size:12.5px; margin:8px 0 0; }
+  kbd { background:var(--panel); border:1px solid var(--line); border-radius:4px; padding:0 5px; font-size:12px; }
+</style>
+<body>
+<main>
+  <h1>AdVTT player demo</h1>
+  <p class="sub">Native HTML5 player with native captions from <code>.captions.vtt</code>, ad blocks from
+    <code>.ads.vtt</code> or <code>.advtt.json</code>. The page marks ads and can skip them during playback;
+    it never modifies the media file.</p>
+
+  <section class="panel" id="loader">
+    <div id="drop" class="drop">Drop files here: the media file, <b>.captions.vtt</b> (or .captions.srt),
+      and optionally <b>.ads.vtt</b> or <b>.advtt.json</b>. Several files at once are routed by suffix.</div>
+    <div class="pickers">
+      <label>Media (mp3, m4a, mp4, webm, ...)<input type="file" id="fMedia" accept="audio/*,video/*"></label>
+      <label>Captions (.captions.vtt or .captions.srt)<input type="file" id="fCaps" accept=".vtt,.srt"></label>
+      <label>Ad spans (.ads.vtt or .advtt.json)<input type="file" id="fSpans" accept=".vtt,.json"></label>
+    </div>
+    <div class="chips">
+      <span class="chip" id="cMedia">media: none</span>
+      <span class="chip" id="cCaps">captions: none</span>
+      <span class="chip" id="cSpans">spans: none</span>
+      <button id="example" hidden>Load the bundled example (no audio)</button>
+    </div>
+    <div id="msg" aria-live="polite"></div>
+  </section>
+
+  <section class="panel" id="playerPanel">
+    <div id="mediaHost"><p class="empty" id="noMedia">No media loaded. The timeline, transcript and chapters still work; click the seek bar to move the playhead.</p></div>
+    <div id="banner" class="banner">
+      <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap" aria-live="polite" aria-atomic="true">
+        <span class="badge" id="bBadge">AD</span>
+        <span class="title" id="bTitle"></span>
+        <span class="meta" id="bMeta"></span>
+      </div>
+      <span class="left" id="bLeft"></span>
+      <button class="primary" id="skip" aria-label="Skip this ad">Skip this ad</button>
+    </div>
+    <div id="bar" class="bar" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0">
+      <div class="played" id="played"></div><div class="head" id="head"></div>
+    </div>
+    <div class="ticks"><span id="t0">0:00:00</span><span id="t1">0:00:00</span></div>
+    <div class="controls">
+      <button id="play" aria-label="Play or pause">Play</button>
+      <button id="back" aria-label="Back 5 seconds">-5 s</button>
+      <button id="fwd" aria-label="Forward 5 seconds">+5 s</button>
+      <button id="cc" aria-label="Toggle captions" aria-pressed="true">CC on</button>
+      <label class="chk"><input type="checkbox" id="auto"> auto-skip spans marked action: skip</label>
+      <label class="chk"><input type="checkbox" id="surface" checked> caption surface for audio files</label>
+      <span class="clock" id="clock">0:00:00 / 0:00:00</span>
+    </div>
+    <div class="stats" id="stats">No spans loaded.</div>
+    <p class="note">Keys: <kbd>Space</kbd> play/pause, <kbd>&larr;</kbd> <kbd>&rarr;</kbd> seek 5 s, <kbd>S</kbd> skip the current ad.
+      Browsers draw captions only on a video surface, so audio files use a short video element while the box above is checked.</p>
+  </section>
+
+  <div class="cols">
+    <section class="panel"><h2>Transcript</h2><ol class="list" id="transcript"><li class="empty">Load a captions file.</li></ol></section>
+    <section class="panel"><h2>Chapters</h2><ol class="list" id="chapters"><li class="empty">Load spans or captions with ad marks.</li></ol></section>
+  </div>
+</main>
+
+<script>
+'use strict';
+const $ = id => document.getElementById(id);
+const S = { media:null, mediaUrl:null, mediaFile:null, cues:[], vttText:'', trackUrl:null, trackEl:null,
+            fallback:null, nativeOk:false, spans:[], recordDuration:0, vtime:0, curCue:-1, curSpan:null,
+            autoSkipped:new Set(), userScrollAt:0 };
+let ccOn = true;
+
+// ---------- time helpers ----------
+function parseTs(s) {                       // "h:mm:ss.mmm" or "mm:ss.mmm"; "," accepted for SRT
+  const m = /^(?:(\d+):)?(\d{1,2}):(\d{2})[.,](\d{1,3})$/.exec(s.trim());
+  if (!m) return NaN;
+  return (+(m[1] || 0)) * 3600 + (+m[2]) * 60 + (+m[3]) + (+m[4].padEnd(3, '0')) / 1000;
+}
+function fmt(sec) {
+  sec = Math.max(0, Math.floor(sec || 0));
+  const h = Math.floor(sec / 3600), m = Math.floor(sec % 3600 / 60), s = sec % 60;
+  return h + ':' + String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+}
+function esc(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+function stripTags(s) {                     // <c.advtt-ad>...</c> etc. -> plain text
+  return s.replace(/<[^>]*>/g, '').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+}
+
+// ---------- Parser 1: WebVTT ----------
+// Blocks are separated by blank lines. The first block is the header (WEBVTT plus anything on the
+// same line, e.g. "WEBVTT - advtt/1.0 captions"); NOTE, STYLE and REGION blocks are skipped (STYLE is
+// kept for information). A cue block is [id line] + timing line + payload lines. Returns cues with
+// the raw payload (markup kept for the native track), the display text, and the cue classes.
+function parseVtt(text) {
+  const out = { header:'', style:'', cues:[] };
+  const blocks = text.replace(/\r\n?/g, '\n').split(/\n[ \t]*\n+/);
+  blocks.forEach((block, bi) => {
+    const lines = block.split('\n');
+    if (bi === 0 && /^\uFEFF?WEBVTT/.test(lines[0])) { out.header = lines[0].replace(/^\uFEFF/, ''); return; }
+    if (/^(NOTE|REGION)(\s|$)/.test(lines[0])) return;
+    if (/^STYLE(\s|$)/.test(lines[0])) { out.style += lines.slice(1).join('\n') + '\n'; return; }
+    const ti = lines.findIndex(l => l.includes('-->'));
+    if (ti < 0 || ti > 1) return;
+    const [a, b] = lines[ti].split('-->');
+    const start = parseTs(a), end = parseTs(b.trim().split(/\s+/)[0]);
+    if (isNaN(start) || isNaN(end)) return;
+    const raw = lines.slice(ti + 1).join('\n').replace(/\n+$/, '');
+    const classes = [];
+    raw.replace(/<c\.([^>\s]+)>/g, (_, c) => { classes.push(...c.split('.')); return ''; });
+    out.cues.push({ id: ti === 1 ? lines[0].trim() : '', start, end, raw, text: stripTags(raw), classes });
+  });
+  return out;
+}
+
+// ---------- Parser 2: SRT ----------
+// Numbered blocks with comma-decimal timestamps and no header. parseSrt returns cues in the same
+// shape as parseVtt; srtToVtt rewrites the text as WebVTT for the native <track> (escapes markup,
+// and wraps AdVTT's "[Ad] ..." / "[Ad?] ..." lines in <c.advtt-ad> so ::cue styling still applies).
+function parseSrt(text) {
+  return parseVtt('WEBVTT\n\n' + text.replace(/\r\n?/g, '\n').replace(/(\d{2}:\d{2}),(\d{3})/g, '$1.$2').replace(/</g, '&lt;'));
+}
+function srtToVtt(text) {
+  const head = 'WEBVTT - converted from SRT\n\nSTYLE\n::cue(.advtt-ad) { color: #ffd166; font-style: italic; }\n\n';
+  return head + text.replace(/\r\n?/g, '\n').split(/\n[ \t]*\n+/).map(block => {
+    const lines = block.split('\n');
+    const ti = lines.findIndex(l => l.includes('-->'));
+    if (ti < 0) return '';
+    const body = esc(lines.slice(ti + 1).join('\n'));
+    const wrapped = /^\[Ad\??\]/.test(body) ? '<c.advtt-ad>' + body + '</c>' : body;
+    return lines.slice(0, ti).join('\n') + '\n' + lines[ti].replace(/(\d{2}:\d{2}),(\d{3})/g, '$1.$2') + '\n' + wrapped;
+  }).filter(Boolean).join('\n\n') + '\n';
+}
+
+// ---------- Parser 3: AdVTT record / analysis JSON ----------
+// advtt/1.0 records carry spans[] with id, start, end, category, form, position, action, state,
+// confidence and optional advertiser{name}. Older analysis.json (advtt/0.1) used type/label/skippable;
+// both are normalised by normSpan.
+function spansFromRecord(obj) {
+  S.recordDuration = obj.duration_sec || (obj.media && obj.media.duration_sec) || 0;
+  return (obj.spans || []).map((sp, i) => normSpan(Object.assign({ id: 'span-' + (i + 1) }, sp)));
+}
+
+// ---------- ads.vtt (disclosure track) -> spans ----------
+// Cue id = span id; payload line 1 = category token, line 2 = one-line JSON (optional).
+function spansFromAdsVtt(text) {
+  return parseVtt(text).cues.map(c => {
+    const lines = c.raw.split('\n'), raw = { id: c.id, start: c.start, end: c.end, category: lines[0].trim().toLowerCase() };
+    try { if (lines[1] && lines[1].trim().startsWith('{')) Object.assign(raw, JSON.parse(lines[1])); } catch (e) { /* token only */ }
+    return normSpan(Object.assign(raw, { start: c.start, end: c.end }));
+  });
+}
+
+// ---------- captions -> spans (fallback when neither ads.vtt nor record is loaded) ----------
+// Cues whose id is "<spanid>.N" (not "seg.N") or whose text starts with "[Ad]" / "[Ad?]" are ad
+// cues; contiguous ad cues with the same id (or an [Ad] prefix) form one span.
+const LABELS = { sponsor:'Ad', selfpromo:'Promo', crosspromo:'Cross-promo', intro:'Intro', outro:'Outro', preview:'Preview', interaction:'Reminder', program:'Program' };
+const LABEL_TO_CAT = Object.fromEntries(Object.entries(LABELS).map(([k, v]) => [v.toLowerCase(), k]));
+function cueAdInfo(c) {
+  const m = /^(?!seg\.)(.+)\.(\d+)$/.exec(c.id);
+  const tag = /^\s*\[([A-Za-z-]+)(\?)?\]/.exec(c.text);
+  if (!m && !tag && !c.classes.includes('advtt-ad')) return null;
+  return { spanId: m ? m[1] : null, uncertain: !!(tag && tag[2]), category: tag ? (LABEL_TO_CAT[tag[1].toLowerCase()] || 'sponsor') : 'sponsor' };
+}
+function spansFromCaptions(cues) {
+  const spans = []; let cur = null;
+  cues.forEach(c => {
+    const info = cueAdInfo(c);
+    if (!info) { cur = null; return; }
+    if (cur && (info.spanId ? cur.id === info.spanId : cur.derived) && cur.uncertain === info.uncertain) { cur.end = Math.max(cur.end, c.end); return; }
+    cur = { id: info.spanId || 'ad-' + String(spans.length + 1).padStart(4, '0'), derived: !info.spanId, start: c.start, end: c.end,
+            category: info.category, state: info.uncertain ? 'uncertain' : 'ad', uncertain: info.uncertain, action: 'mark', confidence: null };
+    spans.push(cur);
+  });
+  return spans.map(normSpan);
+}
+
+// ads.srt (SRT twin): one cue per span. Text is "[Ad] Acme" / "[Ad?]" (advtt/1.0) or
+// "[ADVERTISEMENT - Acme]" / "[SPONSORSHIP? - Acme]" (0.1, any dash); the advertiser is optional.
+function spansFromSrtTwin(text) {
+  return parseSrt(text).cues.map((c, i) => {
+    const m = /^\s*\[([A-Za-z-]+)(\?)?(?:\s+\S+\s+([^\]]+))?\]\s*(.*)$/.exec(c.text) || [];
+    const tag = (m[1] || 'ad').toLowerCase(), adv = (m[3] || m[4] || '').trim();
+    return normSpan({ id: 'ad-' + String(i + 1).padStart(4, '0'), start: c.start, end: c.end, category: LABEL_TO_CAT[tag] || tag,
+                      state: m[2] ? 'uncertain' : 'ad', advertiser: adv || null });
+  });
+}
+
+const CAT_ALIAS = { advertisement:'sponsor', sponsorship:'sponsor' };   // advtt/0.1 tokens
+function normSpan(r) {
+  const c = String(r.category || r.type || 'sponsor').toLowerCase(), category = CAT_ALIAS[c] || c;
+  const adv = r.advertiser ? (typeof r.advertiser === 'string' ? r.advertiser : r.advertiser.name) : r.label;
+  const state = r.state || 'ad';
+  const label = LABELS[category] || category;
+  return { id: String(r.id), start: +r.start, end: +r.end, category, form: r.form || null, position: r.position || r.kind || null,
+           action: r.action || (r.skippable === true ? 'skip' : 'mark'), state, confidence: r.confidence == null ? null : +r.confidence,
+           advertiser: adv || null, title: '[' + label + (state === 'uncertain' ? '?' : '') + ']' + (adv ? ' ' + adv : '') };
+}
+
+// ---------- loading ----------
+function say(text, err) { $('msg').textContent = text; $('msg').className = err ? 'err' : ''; }
+function isVideoFile(f) { return /^video\//.test(f.type) || /\.(mp4|m4v|webm|mov|mkv|ogv)$/i.test(f.name); }
+
+function loadCaptions(text, name) {
+  const isSrt = /\.srt$/i.test(name) || !/^\uFEFF?WEBVTT/.test(text);
+  const parsed = isSrt ? parseSrt(text) : parseVtt(text);
+  S.cues = parsed.cues.sort((a, b) => a.start - b.start);
+  S.vttText = isSrt ? srtToVtt(text) : text;
+  $('cCaps').textContent = 'captions: ' + name + ' (' + S.cues.length + ' cues)'; $('cCaps').classList.add('on');
+  if (!S.spans.length || S.spansSource === 'captions') setSpans(spansFromCaptions(S.cues), 'captions');
+  attachTrack(); renderTranscript(); renderAll();
+}
+function setSpans(spans, source) {
+  S.spans = spans.filter(s => s.category !== 'program' && s.end > s.start).sort((a, b) => a.start - b.start);
+  S.spansSource = source; S.autoSkipped.clear();
+  $('cSpans').textContent = S.spans.length ? 'spans: ' + source + ' (' + S.spans.length + ')' : 'spans: none';
+  $('cSpans').classList.toggle('on', S.spans.length > 0);
+  renderAll();
+}
+async function routeFiles(files) {
+  for (const f of files) {
+    const n = f.name.toLowerCase();
+    try {
+      if (/\.ads\.srt$/.test(n)) setSpans(spansFromSrtTwin(await f.text()), f.name);
+      else if (/\.captions\.(vtt|srt)$/.test(n) || /\.srt$/.test(n)) loadCaptions(await f.text(), f.name);
+      else if (/\.(ads|media-events)\.vtt$/.test(n)) setSpans(spansFromAdsVtt(await f.text()), f.name);
+      else if (/\.(advtt|analysis)\.json$/.test(n) || /\.json$/.test(n)) setSpans(spansFromRecord(JSON.parse(await f.text())), f.name);
+      else if (/\.vtt$/.test(n)) {          // unknown .vtt: sniff a JSON second payload line
+        const t = await f.text();
+        if (parseVtt(t).cues.some(c => /^\{/.test(c.raw.split('\n')[1] || ''))) setSpans(spansFromAdsVtt(t), f.name); else loadCaptions(t, f.name);
+      } else mountMedia(f);
+      say('Loaded ' + f.name);
+    } catch (e) { say('Could not read ' + f.name + ': ' + e.message, true); }
+  }
+}
+
+// ---------- media element and native track ----------
+function mountMedia(file, keepTime) {
+  const wasPlaying = S.media && !S.media.paused, t = keepTime ? curTime() : 0;
+  if (S.media) { S.media.pause(); S.media.remove(); }
+  if (!keepTime && S.mediaUrl) URL.revokeObjectURL(S.mediaUrl);
+  if (file) { S.mediaFile = file; S.mediaUrl = URL.createObjectURL(file); }
+  const video = isVideoFile(S.mediaFile), el = document.createElement(video || $('surface').checked ? 'video' : 'audio');
+  el.controls = true; el.preload = 'metadata'; el.src = S.mediaUrl; el.className = video ? '' : 'audio-only';
+  el.setAttribute('aria-label', 'Media player');
+  $('noMedia').hidden = true; $('mediaHost').appendChild(el); S.media = el; S.nativeOk = false; S.fallback = null;
+  el.addEventListener('loadedmetadata', () => { if (el.tagName === 'VIDEO' && el.videoWidth) el.className = ''; if (t) el.currentTime = t; renderAll(); if (wasPlaying) el.play(); });
+  el.addEventListener('timeupdate', updateTime); el.addEventListener('seeked', updateTime);
+  el.addEventListener('play', () => { $('play').textContent = 'Pause'; }); el.addEventListener('pause', () => { $('play').textContent = 'Play'; });
+  $('cMedia').textContent = 'media: ' + S.mediaFile.name; $('cMedia').classList.add('on');
+  attachTrack();
+}
+function attachTrack() {
+  if (!S.media || !S.vttText) return;
+  if (S.trackEl) S.trackEl.remove();
+  if (S.trackUrl) URL.revokeObjectURL(S.trackUrl);
+  S.trackUrl = URL.createObjectURL(new Blob([S.vttText], { type: 'text/vtt' }));
+  const tr = document.createElement('track');
+  tr.kind = 'subtitles'; tr.srclang = 'en'; tr.label = 'AdVTT captions'; tr.default = true; tr.src = S.trackUrl;
+  tr.addEventListener('load', () => { S.nativeOk = true; });
+  tr.addEventListener('error', fallbackCues);
+  S.media.appendChild(tr); S.trackEl = tr; tr.track.mode = 'showing';
+  setTimeout(() => { if (!S.nativeOk && !(tr.track.cues && tr.track.cues.length)) fallbackCues(); }, 3000);
+  setCC(ccOn);
+}
+// If the browser refuses the blob-URL <track> (Safari has done so), feed the same cues through the
+// TextTrack API instead. Markup in the payload is kept so ::cue(.advtt-ad) still applies.
+function fallbackCues() {
+  if (S.fallback || !S.media || !window.VTTCue || !S.cues.length) return;
+  const tt = S.media.addTextTrack('subtitles', 'AdVTT captions (fallback)', 'en');
+  S.cues.forEach(c => { try { tt.addCue(new VTTCue(c.start, c.end, c.raw)); } catch (e) { /* skip bad cue */ } });
+  if (S.trackEl) S.trackEl.track.mode = 'disabled';
+  S.fallback = tt; setCC(ccOn); say('Native <track> did not load; captions were added through the TextTrack API instead.');
+}
+function setCC(on) {
+  ccOn = on; $('cc').textContent = on ? 'CC on' : 'CC off'; $('cc').setAttribute('aria-pressed', String(on));
+  const tt = S.fallback || (S.trackEl && S.trackEl.track); if (tt) tt.mode = on ? 'showing' : 'hidden';
+}
+
+// ---------- timeline model ----------
+function duration() {
+  const m = S.media && isFinite(S.media.duration) ? S.media.duration : 0;
+  return Math.max(m, S.recordDuration, S.cues.length ? S.cues[S.cues.length - 1].end : 0, S.spans.length ? S.spans[S.spans.length - 1].end : 0);
+}
+function curTime() { return S.media ? S.media.currentTime : S.vtime; }
+function seekTo(t) {
+  t = Math.max(0, Math.min(duration() || 0, t));
+  if (S.media) S.media.currentTime = t; else S.vtime = t;
+  updateTime();
+}
+function spanAt(t) { return S.spans.find(s => t >= s.start && t < s.end) || null; }
+function cueIndexAt(t) {                    // binary search: last cue with start <= t, if t is inside it
+  let lo = 0, hi = S.cues.length - 1, best = -1;
+  while (lo <= hi) { const mid = (lo + hi) >> 1; if (S.cues[mid].start <= t) { best = mid; lo = mid + 1; } else hi = mid - 1; }
+  return best >= 0 && t < S.cues[best].end + 0.3 ? best : -1;
+}
+function chapters() {
+  const out = []; let pos = 0, n = 1;
+  S.spans.forEach(sp => {
+    if (sp.start > pos + 0.5) out.push({ start: pos, end: sp.start, title: 'Part ' + n++, cls: 'program' });
+    out.push({ start: sp.start, end: sp.end, title: sp.title, cls: sp.state === 'uncertain' ? 'uncertain' : 'ad', span: sp });
+    pos = sp.end;
+  });
+  const d = duration();
+  if (d > pos + 0.5 || !out.length) out.push({ start: pos, end: d, title: 'Part ' + n, cls: 'program' });
+  return out;
+}
+
+// ---------- rendering ----------
+function renderAll() { renderBar(); renderChapters(); renderStats(); updateTime(); }
+function renderBar() {
+  const bar = $('bar'), d = duration();
+  bar.querySelectorAll('.region').forEach(e => e.remove());
+  const add = (a, b, cls, title) => {
+    if (!d) return;
+    const r = document.createElement('div'); r.className = 'region ' + cls;
+    r.style.left = (a / d * 100) + '%'; r.style.width = (Math.max(b - a, 0) / d * 100) + '%'; r.title = title;
+    bar.insertBefore(r, $('played'));
+  };
+  add(0, d, 'program', 'program');
+  S.spans.forEach(s => add(s.start, s.end, s.state === 'uncertain' ? 'uncertain' : 'ad', s.title + ' ' + fmt(s.start) + ' to ' + fmt(s.end)));
+  $('t1').textContent = fmt(d); bar.setAttribute('aria-valuemax', String(Math.round(d)));
+}
+function renderChapters() {
+  const ol = $('chapters'); ol.innerHTML = '';
+  if (!S.spans.length && !duration()) { ol.innerHTML = '<li class="empty">Load spans or captions with ad marks.</li>'; return; }
+  chapters().forEach(ch => {
+    const li = document.createElement('li'); li.className = ch.cls; li.dataset.start = ch.start;
+    li.innerHTML = '<span class="t">' + fmt(ch.start) + '</span><span class="txt">' + esc(ch.title) + '</span>' +
+      '<span class="pill ' + ch.cls + '">' + fmt(ch.end - ch.start) + (ch.span && ch.span.confidence != null ? ' · ' + ch.span.confidence.toFixed(2) : '') + '</span>';
+    li.addEventListener('click', () => seekTo(ch.start + 0.01)); ol.appendChild(li);
+  });
+}
+function renderTranscript() {
+  const ol = $('transcript'); ol.innerHTML = ''; S.curCue = -1;
+  const frag = document.createDocumentFragment();
+  S.cues.forEach((c, i) => {
+    const info = cueAdInfo(c), li = document.createElement('li');
+    li.className = info ? (info.uncertain ? 'uncertain' : 'ad') : ''; li.dataset.i = i;
+    li.innerHTML = '<span class="t">' + fmt(c.start) + '</span><span class="txt">' + esc(c.text).replace(/\n/g, '<br>') + '</span>';
+    frag.appendChild(li);
+  });
+  ol.appendChild(frag);
+  ol.onclick = e => { const li = e.target.closest('li[data-i]'); if (li) seekTo(S.cues[+li.dataset.i].start + 0.01); };
+}
+function renderStats() {
+  const d = duration(), ad = S.spans.filter(s => s.state === 'ad').reduce((a, s) => a + s.end - s.start, 0);
+  const unc = S.spans.filter(s => s.state === 'uncertain').reduce((a, s) => a + s.end - s.start, 0);
+  if (!S.spans.length) { $('stats').textContent = 'No spans loaded.'; return; }
+  $('stats').innerHTML = '<b>' + S.spans.length + '</b> span' + (S.spans.length === 1 ? '' : 's') + ' from ' + esc(S.spansSource) +
+    ' · marked ad <b>' + fmt(ad) + '</b>' + (d ? ' (' + (ad / d * 100).toFixed(1) + '% of ' + fmt(d) + ')' : '') +
+    (unc ? ' · uncertain ' + fmt(unc) : '') + ' · auto-skip is ' + ($('auto').checked ? 'on' : 'off');
+}
+function updateTime() {
+  const t = curTime(), d = duration();
+  $('clock').textContent = fmt(t) + ' / ' + fmt(d); $('t0').textContent = fmt(t);
+  $('played').style.width = d ? (t / d * 100) + '%' : '0'; $('head').style.left = d ? (t / d * 100) + '%' : '0';
+  $('bar').setAttribute('aria-valuenow', String(Math.round(t))); $('bar').setAttribute('aria-valuetext', fmt(t));
+  // ad banner and auto-skip
+  const sp = spanAt(t), banner = $('banner');
+  if (sp && $('auto').checked && sp.action === 'skip' && sp.state === 'ad' && !S.autoSkipped.has(sp.id) && S.media) {
+    S.autoSkipped.add(sp.id); say('Auto-skipped ' + sp.id + ' ' + sp.title); seekTo(sp.end + 0.05); return;
+  }
+  if (sp !== S.curSpan) {
+    S.curSpan = sp; banner.classList.toggle('on', !!sp);
+    if (sp) {
+      banner.classList.toggle('uncertain', sp.state === 'uncertain');
+      $('bBadge').textContent = sp.state === 'uncertain' ? 'AD?' : 'AD'; $('bTitle').textContent = sp.title;
+      $('bMeta').textContent = [sp.category, sp.form, sp.position, sp.confidence != null ? 'confidence ' + sp.confidence.toFixed(2) : null,
+                                'action: ' + sp.action, sp.id].filter(Boolean).join(' · ');
+    }
+    document.querySelectorAll('#chapters li').forEach(li => li.classList.toggle('now', sp ? +li.dataset.start === sp.start : false));
+  }
+  if (sp) $('bLeft').textContent = fmt(sp.end - t) + ' left of ' + fmt(sp.end - sp.start);
+  // transcript highlight
+  const ci = cueIndexAt(t);
+  if (ci !== S.curCue) {
+    const ol = $('transcript'), prev = ol.querySelector('li.now'); if (prev) prev.classList.remove('now');
+    S.curCue = ci;
+    if (ci >= 0) { const li = ol.children[ci]; li.classList.add('now'); if (Date.now() - S.userScrollAt > 3000) keepVisibleInList(ol, li); }
+  }
+}
+
+// Scroll only the transcript list, never the page. scrollIntoView() walks every
+// scrollable ancestor including the document, which moved the whole page during playback.
+function keepVisibleInList(list, li) {
+  const top = li.offsetTop - (li.offsetParent === list ? 0 : list.offsetTop), bottom = top + li.offsetHeight;
+  if (top < list.scrollTop) list.scrollTop = top;
+  else if (bottom > list.scrollTop + list.clientHeight) list.scrollTop = bottom - list.clientHeight;
+}
+
+// ---------- controls ----------
+function togglePlay() { if (!S.media) return; if (S.media.paused) S.media.play(); else S.media.pause(); }
+function skipAd() { const sp = spanAt(curTime()); if (sp) { seekTo(sp.end + 0.05); say('Skipped ' + sp.id + ' ' + sp.title); } }
+$('play').addEventListener('click', togglePlay);
+$('back').addEventListener('click', () => seekTo(curTime() - 5));
+$('fwd').addEventListener('click', () => seekTo(curTime() + 5));
+$('skip').addEventListener('click', skipAd);
+$('cc').addEventListener('click', () => setCC(!ccOn));
+$('auto').addEventListener('change', () => { S.autoSkipped.clear(); renderStats(); updateTime(); });
+$('surface').addEventListener('change', () => { if (S.mediaFile) mountMedia(null, true); });
+$('bar').addEventListener('click', e => { const r = e.currentTarget.getBoundingClientRect(); seekTo((e.clientX - r.left) / r.width * duration()); });
+['wheel', 'touchmove'].forEach(ev => $('transcript').addEventListener(ev, () => { S.userScrollAt = Date.now(); }, { passive: true }));
+document.addEventListener('keydown', e => {
+  const tag = (e.target.tagName || '').toLowerCase(), isCheckbox = tag === 'input' && e.target.type === 'checkbox';
+  // Leave keys alone on focused controls (buttons, native player, a checkbox taking Space); arrows and S still work from a checkbox.
+  if (['input', 'textarea', 'select', 'button', 'video', 'audio'].includes(tag) && (!isCheckbox || e.code === 'Space')) return;
+  if (e.code === 'Space') { e.preventDefault(); togglePlay(); }
+  else if (e.code === 'ArrowLeft') { e.preventDefault(); seekTo(curTime() - 5); }
+  else if (e.code === 'ArrowRight') { e.preventDefault(); seekTo(curTime() + 5); }
+  else if (e.key === 's' || e.key === 'S') { skipAd(); }
+});
+
+// ---------- file inputs, drag and drop, bundled example ----------
+$('fMedia').addEventListener('change', e => routeFiles(e.target.files));
+$('fCaps').addEventListener('change', e => routeFiles(e.target.files));
+$('fSpans').addEventListener('change', e => routeFiles(e.target.files));
+const drop = $('drop');
+['dragenter', 'dragover'].forEach(ev => document.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('hot'); }));
+['dragleave', 'drop'].forEach(ev => document.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('hot'); }));
+document.addEventListener('drop', e => { if (e.dataTransfer && e.dataTransfer.files.length) routeFiles(e.dataTransfer.files); });
+
+if (/^https?:$/.test(location.protocol)) {   // fetch() is blocked on file://, so the button only appears when served
+  $('example').hidden = false;
+  $('example').addEventListener('click', async () => {
+    try {
+      const [vtt, rec] = await Promise.all([fetch('episode-112.captions.vtt').then(r => r.text()), fetch('episode-112.analysis.json').then(r => r.json())]);
+      setSpans(spansFromRecord(rec), 'episode-112.analysis.json'); loadCaptions(vtt, 'episode-112.captions.vtt');
+      say('Bundled example loaded: a synthetic excerpt with two spans and no audio.');
+    } catch (e) { say('Could not fetch the bundled example: ' + e.message, true); }
+  });
+}
+renderAll();
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-haiku-4-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 197,
+    "end_index": 202,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This episode is presented by Mandscape",
+    "end_evidence": "Sale ends on August 11th"
+   },
+   {
+    "start_index": 203,
+    "end_index": 221,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This summer, whatever you're watching, baseball, golf, soccer",
+    "end_evidence": "Terms at DKNG.co slash predictions promo"
+   },
+   {
+    "start_index": 222,
+    "end_index": 246,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This episode is brought to you by the farmer's dog",
+    "end_evidence": "This offers for new customers only"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":197,\"end_index\":202,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This episode is presented by Mandscape\",\"end_evidence\":\"Sale ends on August 11th\"},{\"start_index\":203,\"end_index\":221,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This summer, whatever you're watching, baseball, golf, soccer\",\"end_evidence\":\"Terms at DKNG.co slash predictions promo\"},{\"start_index\":222,\"end_index\":246,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This episode is brought to you by the farmer's dog\",\"end_evidence\":\"This offers for new customers only\"}]}",
+ "meta": {
+  "wall_sec": 48.79,
+  "prompt_tokens": 10,
+  "completion_tokens": 4768,
+  "thinking_tokens": 4238,
+  "cache_read_tokens": 0,
+  "cache_write_tokens": 18614,
+  "cost_usd": 0.06801399999999999,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

@@ -1,0 +1,1044 @@
+{
+ "provider": "synthetic",
+ "model": "synthetic",
+ "timing": "model",
+ "has_words": true,
+ "segments": [
+  {
+   "start": 0.0,
+   "end": 6.0,
+   "text": "Welcome back to the Harbor Report, I'm your host and today we are looking at the port authority budget.",
+   "words": [
+    {
+     "w": "Welcome",
+     "s": 0.0,
+     "e": 0.32
+    },
+    {
+     "w": "back",
+     "s": 0.32,
+     "e": 0.63
+    },
+    {
+     "w": "to",
+     "s": 0.63,
+     "e": 0.95
+    },
+    {
+     "w": "the",
+     "s": 0.95,
+     "e": 1.26
+    },
+    {
+     "w": "Harbor",
+     "s": 1.26,
+     "e": 1.58
+    },
+    {
+     "w": "Report,",
+     "s": 1.58,
+     "e": 1.89
+    },
+    {
+     "w": "I'm",
+     "s": 1.89,
+     "e": 2.21
+    },
+    {
+     "w": "your",
+     "s": 2.21,
+     "e": 2.53
+    },
+    {
+     "w": "host",
+     "s": 2.53,
+     "e": 2.84
+    },
+    {
+     "w": "and",
+     "s": 2.84,
+     "e": 3.16
+    },
+    {
+     "w": "today",
+     "s": 3.16,
+     "e": 3.47
+    },
+    {
+     "w": "we",
+     "s": 3.47,
+     "e": 3.79
+    },
+    {
+     "w": "are",
+     "s": 3.79,
+     "e": 4.11
+    },
+    {
+     "w": "looking",
+     "s": 4.11,
+     "e": 4.42
+    },
+    {
+     "w": "at",
+     "s": 4.42,
+     "e": 4.74
+    },
+    {
+     "w": "the",
+     "s": 4.74,
+     "e": 5.05
+    },
+    {
+     "w": "port",
+     "s": 5.05,
+     "e": 5.37
+    },
+    {
+     "w": "authority",
+     "s": 5.37,
+     "e": 5.68
+    },
+    {
+     "w": "budget.",
+     "s": 5.68,
+     "e": 6.0
+    }
+   ]
+  },
+  {
+   "start": 6.0,
+   "end": 12.0,
+   "text": "The council voted seven to two to delay the dredging contract until the environmental review is complete.",
+   "words": [
+    {
+     "w": "The",
+     "s": 6.0,
+     "e": 6.35
+    },
+    {
+     "w": "council",
+     "s": 6.35,
+     "e": 6.71
+    },
+    {
+     "w": "voted",
+     "s": 6.71,
+     "e": 7.06
+    },
+    {
+     "w": "seven",
+     "s": 7.06,
+     "e": 7.41
+    },
+    {
+     "w": "to",
+     "s": 7.41,
+     "e": 7.76
+    },
+    {
+     "w": "two",
+     "s": 7.76,
+     "e": 8.12
+    },
+    {
+     "w": "to",
+     "s": 8.12,
+     "e": 8.47
+    },
+    {
+     "w": "delay",
+     "s": 8.47,
+     "e": 8.82
+    },
+    {
+     "w": "the",
+     "s": 8.82,
+     "e": 9.18
+    },
+    {
+     "w": "dredging",
+     "s": 9.18,
+     "e": 9.53
+    },
+    {
+     "w": "contract",
+     "s": 9.53,
+     "e": 9.88
+    },
+    {
+     "w": "until",
+     "s": 9.88,
+     "e": 10.24
+    },
+    {
+     "w": "the",
+     "s": 10.24,
+     "e": 10.59
+    },
+    {
+     "w": "environmental",
+     "s": 10.59,
+     "e": 10.94
+    },
+    {
+     "w": "review",
+     "s": 10.94,
+     "e": 11.29
+    },
+    {
+     "w": "is",
+     "s": 11.29,
+     "e": 11.65
+    },
+    {
+     "w": "complete.",
+     "s": 11.65,
+     "e": 12.0
+    }
+   ]
+  },
+  {
+   "start": 12.0,
+   "end": 18.0,
+   "text": "Critics say the delay will cost shipping companies millions in rerouting fees this winter.",
+   "words": [
+    {
+     "w": "Critics",
+     "s": 12.0,
+     "e": 12.43
+    },
+    {
+     "w": "say",
+     "s": 12.43,
+     "e": 12.86
+    },
+    {
+     "w": "the",
+     "s": 12.86,
+     "e": 13.29
+    },
+    {
+     "w": "delay",
+     "s": 13.29,
+     "e": 13.71
+    },
+    {
+     "w": "will",
+     "s": 13.71,
+     "e": 14.14
+    },
+    {
+     "w": "cost",
+     "s": 14.14,
+     "e": 14.57
+    },
+    {
+     "w": "shipping",
+     "s": 14.57,
+     "e": 15.0
+    },
+    {
+     "w": "companies",
+     "s": 15.0,
+     "e": 15.43
+    },
+    {
+     "w": "millions",
+     "s": 15.43,
+     "e": 15.86
+    },
+    {
+     "w": "in",
+     "s": 15.86,
+     "e": 16.29
+    },
+    {
+     "w": "rerouting",
+     "s": 16.29,
+     "e": 16.71
+    },
+    {
+     "w": "fees",
+     "s": 16.71,
+     "e": 17.14
+    },
+    {
+     "w": "this",
+     "s": 17.14,
+     "e": 17.57
+    },
+    {
+     "w": "winter.",
+     "s": 17.57,
+     "e": 18.0
+    }
+   ]
+  },
+  {
+   "start": 18.0,
+   "end": 24.0,
+   "text": "Supporters argue the review found sediment contamination that nobody had measured before.",
+   "words": [
+    {
+     "w": "Supporters",
+     "s": 18.0,
+     "e": 18.5
+    },
+    {
+     "w": "argue",
+     "s": 18.5,
+     "e": 19.0
+    },
+    {
+     "w": "the",
+     "s": 19.0,
+     "e": 19.5
+    },
+    {
+     "w": "review",
+     "s": 19.5,
+     "e": 20.0
+    },
+    {
+     "w": "found",
+     "s": 20.0,
+     "e": 20.5
+    },
+    {
+     "w": "sediment",
+     "s": 20.5,
+     "e": 21.0
+    },
+    {
+     "w": "contamination",
+     "s": 21.0,
+     "e": 21.5
+    },
+    {
+     "w": "that",
+     "s": 21.5,
+     "e": 22.0
+    },
+    {
+     "w": "nobody",
+     "s": 22.0,
+     "e": 22.5
+    },
+    {
+     "w": "had",
+     "s": 22.5,
+     "e": 23.0
+    },
+    {
+     "w": "measured",
+     "s": 23.0,
+     "e": 23.5
+    },
+    {
+     "w": "before.",
+     "s": 23.5,
+     "e": 24.0
+    }
+   ]
+  },
+  {
+   "start": 24.0,
+   "end": 30.0,
+   "text": "We spoke with the harbor master who said the channel is safe at current depths for now.",
+   "words": [
+    {
+     "w": "We",
+     "s": 24.0,
+     "e": 24.35
+    },
+    {
+     "w": "spoke",
+     "s": 24.35,
+     "e": 24.71
+    },
+    {
+     "w": "with",
+     "s": 24.71,
+     "e": 25.06
+    },
+    {
+     "w": "the",
+     "s": 25.06,
+     "e": 25.41
+    },
+    {
+     "w": "harbor",
+     "s": 25.41,
+     "e": 25.76
+    },
+    {
+     "w": "master",
+     "s": 25.76,
+     "e": 26.12
+    },
+    {
+     "w": "who",
+     "s": 26.12,
+     "e": 26.47
+    },
+    {
+     "w": "said",
+     "s": 26.47,
+     "e": 26.82
+    },
+    {
+     "w": "the",
+     "s": 26.82,
+     "e": 27.18
+    },
+    {
+     "w": "channel",
+     "s": 27.18,
+     "e": 27.53
+    },
+    {
+     "w": "is",
+     "s": 27.53,
+     "e": 27.88
+    },
+    {
+     "w": "safe",
+     "s": 27.88,
+     "e": 28.24
+    },
+    {
+     "w": "at",
+     "s": 28.24,
+     "e": 28.59
+    },
+    {
+     "w": "current",
+     "s": 28.59,
+     "e": 28.94
+    },
+    {
+     "w": "depths",
+     "s": 28.94,
+     "e": 29.29
+    },
+    {
+     "w": "for",
+     "s": 29.29,
+     "e": 29.65
+    },
+    {
+     "w": "now.",
+     "s": 29.65,
+     "e": 30.0
+    }
+   ]
+  },
+  {
+   "start": 30.0,
+   "end": 36.0,
+   "text": "In other news, the ferry operator reported record ridership over the summer months.",
+   "words": [
+    {
+     "w": "In",
+     "s": 30.0,
+     "e": 30.46
+    },
+    {
+     "w": "other",
+     "s": 30.46,
+     "e": 30.92
+    },
+    {
+     "w": "news,",
+     "s": 30.92,
+     "e": 31.38
+    },
+    {
+     "w": "the",
+     "s": 31.38,
+     "e": 31.85
+    },
+    {
+     "w": "ferry",
+     "s": 31.85,
+     "e": 32.31
+    },
+    {
+     "w": "operator",
+     "s": 32.31,
+     "e": 32.77
+    },
+    {
+     "w": "reported",
+     "s": 32.77,
+     "e": 33.23
+    },
+    {
+     "w": "record",
+     "s": 33.23,
+     "e": 33.69
+    },
+    {
+     "w": "ridership",
+     "s": 33.69,
+     "e": 34.15
+    },
+    {
+     "w": "over",
+     "s": 34.15,
+     "e": 34.62
+    },
+    {
+     "w": "the",
+     "s": 34.62,
+     "e": 35.08
+    },
+    {
+     "w": "summer",
+     "s": 35.08,
+     "e": 35.54
+    },
+    {
+     "w": "months.",
+     "s": 35.54,
+     "e": 36.0
+    }
+   ]
+  },
+  {
+   "start": 36.0,
+   "end": 42.0,
+   "text": "Ridership was up twelve percent compared to last year according to the transit agency.",
+   "words": [
+    {
+     "w": "Ridership",
+     "s": 36.0,
+     "e": 36.43
+    },
+    {
+     "w": "was",
+     "s": 36.43,
+     "e": 36.86
+    },
+    {
+     "w": "up",
+     "s": 36.86,
+     "e": 37.29
+    },
+    {
+     "w": "twelve",
+     "s": 37.29,
+     "e": 37.71
+    },
+    {
+     "w": "percent",
+     "s": 37.71,
+     "e": 38.14
+    },
+    {
+     "w": "compared",
+     "s": 38.14,
+     "e": 38.57
+    },
+    {
+     "w": "to",
+     "s": 38.57,
+     "e": 39.0
+    },
+    {
+     "w": "last",
+     "s": 39.0,
+     "e": 39.43
+    },
+    {
+     "w": "year",
+     "s": 39.43,
+     "e": 39.86
+    },
+    {
+     "w": "according",
+     "s": 39.86,
+     "e": 40.29
+    },
+    {
+     "w": "to",
+     "s": 40.29,
+     "e": 40.71
+    },
+    {
+     "w": "the",
+     "s": 40.71,
+     "e": 41.14
+    },
+    {
+     "w": "transit",
+     "s": 41.14,
+     "e": 41.57
+    },
+    {
+     "w": "agency.",
+     "s": 41.57,
+     "e": 42.0
+    }
+   ]
+  },
+  {
+   "start": 42.0,
+   "end": 48.0,
+   "text": "The agency credits the new schedule and the fare cap introduced in the spring.",
+   "words": [
+    {
+     "w": "The",
+     "s": 42.0,
+     "e": 42.43
+    },
+    {
+     "w": "agency",
+     "s": 42.43,
+     "e": 42.86
+    },
+    {
+     "w": "credits",
+     "s": 42.86,
+     "e": 43.29
+    },
+    {
+     "w": "the",
+     "s": 43.29,
+     "e": 43.71
+    },
+    {
+     "w": "new",
+     "s": 43.71,
+     "e": 44.14
+    },
+    {
+     "w": "schedule",
+     "s": 44.14,
+     "e": 44.57
+    },
+    {
+     "w": "and",
+     "s": 44.57,
+     "e": 45.0
+    },
+    {
+     "w": "the",
+     "s": 45.0,
+     "e": 45.43
+    },
+    {
+     "w": "fare",
+     "s": 45.43,
+     "e": 45.86
+    },
+    {
+     "w": "cap",
+     "s": 45.86,
+     "e": 46.29
+    },
+    {
+     "w": "introduced",
+     "s": 46.29,
+     "e": 46.71
+    },
+    {
+     "w": "in",
+     "s": 46.71,
+     "e": 47.14
+    },
+    {
+     "w": "the",
+     "s": 47.14,
+     "e": 47.57
+    },
+    {
+     "w": "spring.",
+     "s": 47.57,
+     "e": 48.0
+    }
+   ]
+  },
+  {
+   "start": 48.0,
+   "end": 54.0,
+   "text": "Coming up after this, we look at the proposed bike lane on the waterfront road.",
+   "words": [
+    {
+     "w": "Coming",
+     "s": 48.0,
+     "e": 48.4
+    },
+    {
+     "w": "up",
+     "s": 48.4,
+     "e": 48.8
+    },
+    {
+     "w": "after",
+     "s": 48.8,
+     "e": 49.2
+    },
+    {
+     "w": "this,",
+     "s": 49.2,
+     "e": 49.6
+    },
+    {
+     "w": "we",
+     "s": 49.6,
+     "e": 50.0
+    },
+    {
+     "w": "look",
+     "s": 50.0,
+     "e": 50.4
+    },
+    {
+     "w": "at",
+     "s": 50.4,
+     "e": 50.8
+    },
+    {
+     "w": "the",
+     "s": 50.8,
+     "e": 51.2
+    },
+    {
+     "w": "proposed",
+     "s": 51.2,
+     "e": 51.6
+    },
+    {
+     "w": "bike",
+     "s": 51.6,
+     "e": 52.0
+    },
+    {
+     "w": "lane",
+     "s": 52.0,
+     "e": 52.4
+    },
+    {
+     "w": "on",
+     "s": 52.4,
+     "e": 52.8
+    },
+    {
+     "w": "the",
+     "s": 52.8,
+     "e": 53.2
+    },
+    {
+     "w": "waterfront",
+     "s": 53.2,
+     "e": 53.6
+    },
+    {
+     "w": "road.",
+     "s": 53.6,
+     "e": 54.0
+    }
+   ]
+  },
+  {
+   "start": 54.0,
+   "end": 60.0,
+   "text": "The bike lane plan would remove forty parking spaces along the eastern section.",
+   "words": [
+    {
+     "w": "The",
+     "s": 54.0,
+     "e": 54.46
+    },
+    {
+     "w": "bike",
+     "s": 54.46,
+     "e": 54.92
+    },
+    {
+     "w": "lane",
+     "s": 54.92,
+     "e": 55.38
+    },
+    {
+     "w": "plan",
+     "s": 55.38,
+     "e": 55.85
+    },
+    {
+     "w": "would",
+     "s": 55.85,
+     "e": 56.31
+    },
+    {
+     "w": "remove",
+     "s": 56.31,
+     "e": 56.77
+    },
+    {
+     "w": "forty",
+     "s": 56.77,
+     "e": 57.23
+    },
+    {
+     "w": "parking",
+     "s": 57.23,
+     "e": 57.69
+    },
+    {
+     "w": "spaces",
+     "s": 57.69,
+     "e": 58.15
+    },
+    {
+     "w": "along",
+     "s": 58.15,
+     "e": 58.62
+    },
+    {
+     "w": "the",
+     "s": 58.62,
+     "e": 59.08
+    },
+    {
+     "w": "eastern",
+     "s": 59.08,
+     "e": 59.54
+    },
+    {
+     "w": "section.",
+     "s": 59.54,
+     "e": 60.0
+    }
+   ]
+  },
+  {
+   "start": 60.0,
+   "end": 66.0,
+   "text": "Business owners have asked for a phased rollout starting with the western end.",
+   "words": [
+    {
+     "w": "Business",
+     "s": 60.0,
+     "e": 60.46
+    },
+    {
+     "w": "owners",
+     "s": 60.46,
+     "e": 60.92
+    },
+    {
+     "w": "have",
+     "s": 60.92,
+     "e": 61.38
+    },
+    {
+     "w": "asked",
+     "s": 61.38,
+     "e": 61.85
+    },
+    {
+     "w": "for",
+     "s": 61.85,
+     "e": 62.31
+    },
+    {
+     "w": "a",
+     "s": 62.31,
+     "e": 62.77
+    },
+    {
+     "w": "phased",
+     "s": 62.77,
+     "e": 63.23
+    },
+    {
+     "w": "rollout",
+     "s": 63.23,
+     "e": 63.69
+    },
+    {
+     "w": "starting",
+     "s": 63.69,
+     "e": 64.15
+    },
+    {
+     "w": "with",
+     "s": 64.15,
+     "e": 64.62
+    },
+    {
+     "w": "the",
+     "s": 64.62,
+     "e": 65.08
+    },
+    {
+     "w": "western",
+     "s": 65.08,
+     "e": 65.54
+    },
+    {
+     "w": "end.",
+     "s": 65.54,
+     "e": 66.0
+    }
+   ]
+  },
+  {
+   "start": 66.0,
+   "end": 72.0,
+   "text": "The planning department will hold a public meeting next Tuesday at the library.",
+   "words": [
+    {
+     "w": "The",
+     "s": 66.0,
+     "e": 66.46
+    },
+    {
+     "w": "planning",
+     "s": 66.46,
+     "e": 66.92
+    },
+    {
+     "w": "department",
+     "s": 66.92,
+     "e": 67.38
+    },
+    {
+     "w": "will",
+     "s": 67.38,
+     "e": 67.85
+    },
+    {
+     "w": "hold",
+     "s": 67.85,
+     "e": 68.31
+    },
+    {
+     "w": "a",
+     "s": 68.31,
+     "e": 68.77
+    },
+    {
+     "w": "public",
+     "s": 68.77,
+     "e": 69.23
+    },
+    {
+     "w": "meeting",
+     "s": 69.23,
+     "e": 69.69
+    },
+    {
+     "w": "next",
+     "s": 69.69,
+     "e": 70.15
+    },
+    {
+     "w": "Tuesday",
+     "s": 70.15,
+     "e": 70.62
+    },
+    {
+     "w": "at",
+     "s": 70.62,
+     "e": 71.08
+    },
+    {
+     "w": "the",
+     "s": 71.08,
+     "e": 71.54
+    },
+    {
+     "w": "library.",
+     "s": 71.54,
+     "e": 72.0
+    }
+   ]
+  },
+  {
+   "start": 72.0,
+   "end": 78.0,
+   "text": "That is the show for today, thanks for listening and we will see you tomorrow.",
+   "words": [
+    {
+     "w": "That",
+     "s": 72.0,
+     "e": 72.4
+    },
+    {
+     "w": "is",
+     "s": 72.4,
+     "e": 72.8
+    },
+    {
+     "w": "the",
+     "s": 72.8,
+     "e": 73.2
+    },
+    {
+     "w": "show",
+     "s": 73.2,
+     "e": 73.6
+    },
+    {
+     "w": "for",
+     "s": 73.6,
+     "e": 74.0
+    },
+    {
+     "w": "today,",
+     "s": 74.0,
+     "e": 74.4
+    },
+    {
+     "w": "thanks",
+     "s": 74.4,
+     "e": 74.8
+    },
+    {
+     "w": "for",
+     "s": 74.8,
+     "e": 75.2
+    },
+    {
+     "w": "listening",
+     "s": 75.2,
+     "e": 75.6
+    },
+    {
+     "w": "and",
+     "s": 75.6,
+     "e": 76.0
+    },
+    {
+     "w": "we",
+     "s": 76.0,
+     "e": 76.4
+    },
+    {
+     "w": "will",
+     "s": 76.4,
+     "e": 76.8
+    },
+    {
+     "w": "see",
+     "s": 76.8,
+     "e": 77.2
+    },
+    {
+     "w": "you",
+     "s": 77.2,
+     "e": 77.6
+    },
+    {
+     "w": "tomorrow.",
+     "s": 77.6,
+     "e": 78.0
+    }
+   ]
+  }
+ ]
+}

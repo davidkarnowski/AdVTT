@@ -1,0 +1,21 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": []
+ },
+ "raw_text": "{\"ad_spans\":[]}",
+ "meta": {
+  "wall_sec": 3.68,
+  "prompt_tokens": 2,
+  "completion_tokens": 96,
+  "thinking_tokens": 0,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 13639,
+  "cost_usd": 0.06630720000000001,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

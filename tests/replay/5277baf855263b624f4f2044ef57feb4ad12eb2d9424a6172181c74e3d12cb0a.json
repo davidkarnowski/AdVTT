@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 609,
+    "end_index": 653,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "Big is coming on September 2nd.",
+    "end_evidence": "Limited time offer."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":609,\"end_index\":653,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"Big is coming on September 2nd.\",\"end_evidence\":\"Limited time offer.\"}]}",
+ "meta": {
+  "wall_sec": 5.74,
+  "prompt_tokens": 2,
+  "completion_tokens": 328,
+  "thinking_tokens": 200,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 13816,
+  "cost_usd": 0.0686122,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

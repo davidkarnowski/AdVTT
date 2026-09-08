@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-haiku-4-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 1744,
+    "end_index": 1758,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "and 5 grams of Crea Vitalis premium",
+    "end_evidence": "That's drinkag1.com slash Joe Rogan"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":1744,\"end_index\":1758,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"and 5 grams of Crea Vitalis premium\",\"end_evidence\":\"That's drinkag1.com slash Joe Rogan\"}]}",
+ "meta": {
+  "wall_sec": 61.05,
+  "prompt_tokens": 10,
+  "completion_tokens": 5551,
+  "thinking_tokens": 5072,
+  "cache_read_tokens": 9507,
+  "cache_write_tokens": 11696,
+  "cost_usd": 0.0600657,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-haiku-4-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 217,
+    "end_index": 234,
+    "kind": "midroll",
+    "confidence": 0.98,
+    "evidence": "Hey, Mike Baker here.",
+    "end_evidence": "Q U O Quo.com slash PDB."
+   },
+   {
+    "start_index": 235,
+    "end_index": 256,
+    "kind": "midroll",
+    "confidence": 0.98,
+    "evidence": "Hey, Mike Baker here with a message for dog lovers.",
+    "end_evidence": "Once again, Sundaysfordogs.com slash PDB or use code PDB at checkout."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":217,\"end_index\":234,\"kind\":\"midroll\",\"confidence\":0.98,\"evidence\":\"Hey, Mike Baker here.\",\"end_evidence\":\"Q U O Quo.com slash PDB.\"},{\"start_index\":235,\"end_index\":256,\"kind\":\"midroll\",\"confidence\":0.98,\"evidence\":\"Hey, Mike Baker here with a message for dog lovers.\",\"end_evidence\":\"Once again, Sundaysfordogs.com slash PDB or use code PDB at checkout.\"}]}",
+ "meta": {
+  "wall_sec": 40.32,
+  "prompt_tokens": 10,
+  "completion_tokens": 4587,
+  "thinking_tokens": 3958,
+  "cache_read_tokens": 9507,
+  "cache_write_tokens": 7060,
+  "cost_usd": 0.0420497,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

@@ -1,0 +1,83 @@
+{
+ "schema_version": 1,
+ "kind": "ground_truth",
+ "episode": "2026-08-25_2231_PDB_Afternoon_Bulletin_August_25th_2026_Russia_Just_Crossed",
+ "segment_count": 142,
+ "duration_sec": 806.1,
+ "labeled_by": "machine-draft: consensus of sonnet5-ladder2, opus5-ladder2, haiku45-ladder2 (>= 2 agree)",
+ "source": "machine-draft",
+ "status": "needs_human_review",
+ "spans": [
+  {
+   "start_index": 65,
+   "end_index": 90,
+   "kind": "midroll"
+  },
+  {
+   "start_index": 128,
+   "end_index": 141,
+   "kind": "postroll"
+  }
+ ],
+ "consensus_detail": [
+  {
+   "start_index": 65,
+   "end_index": 90,
+   "start": 378.2,
+   "end": 516.48,
+   "kind": "midroll",
+   "agreed_models": [
+    "sonnet5-ladder2",
+    "opus5-ladder2",
+    "haiku45-ladder2"
+   ],
+   "votes": 3,
+   "union_extent": {
+    "start_index": 65,
+    "end_index": 90,
+    "start": 378.2,
+    "end": 516.48
+   },
+   "disputed_seconds": 0.0
+  },
+  {
+   "start_index": 128,
+   "end_index": 141,
+   "start": 735.2,
+   "end": 806.12,
+   "kind": "postroll",
+   "agreed_models": [
+    "sonnet5-ladder2",
+    "opus5-ladder2",
+    "haiku45-ladder2"
+   ],
+   "votes": 3,
+   "union_extent": {
+    "start_index": 128,
+    "end_index": 141,
+    "start": 735.2,
+    "end": 806.12
+   },
+   "disputed_seconds": 0.0
+  }
+ ],
+ "single_model_only": [
+  {
+   "start_index": 125,
+   "end_index": 126,
+   "start": 707.04,
+   "end": 719.6,
+   "models": [
+    "sonnet5-ladder2"
+   ]
+  }
+ ],
+ "pairwise_jaccard_ad_seconds": {
+  "sonnet5-ladder2~opus5-ladder2": 0.942,
+  "sonnet5-ladder2~haiku45-ladder2": 0.942,
+  "opus5-ladder2~haiku45-ladder2": 1.0
+ },
+ "notes": [
+  "Draft produced by scripts/consensus.py; a human must confirm every span and resolve single_model_only regions before this becomes <stem>_ads.truth.json."
+ ]
+}

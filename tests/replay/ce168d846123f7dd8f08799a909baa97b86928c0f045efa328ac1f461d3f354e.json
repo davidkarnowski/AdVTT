@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-opus-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 83,
+    "end_index": 92,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "about preparing for the future and protecting your loved ones",
+    "end_evidence": "free quote at ethos.com slash PDB"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":83,\"end_index\":92,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"about preparing for the future and protecting your loved ones\",\"end_evidence\":\"free quote at ethos.com slash PDB\"}]}",
+ "meta": {
+  "wall_sec": 6.67,
+  "prompt_tokens": 2,
+  "completion_tokens": 352,
+  "thinking_tokens": 212,
+  "cache_read_tokens": 7249,
+  "cache_write_tokens": 11086,
+  "cost_usd": 0.1295905,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

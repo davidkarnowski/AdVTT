@@ -1,0 +1,9 @@
+{
+ "episode": "2026-08-03_2252_PDB_Afternoon_Bulletin_August_3rd_2026_Irans_Leade",
+ "source": "M-dai-check: no dynamic insertion",
+ "delivery": "inserted",
+ "spans": [],
+ "notes": [
+  "PDB is served from cdn-media.speakeasystudio.ai with no stitch map and byte-identical double downloads (track M, tests/fixtures/manifest.json); every ad in the file is host-read."
+ ]
+}

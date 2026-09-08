@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 2248,
+    "end_index": 2262,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "Food cooked over real wood is just on another level,",
+    "end_evidence": "check out Traeger Grills."
+   },
+   {
+    "start_index": 2263,
+    "end_index": 2287,
+    "kind": "midroll",
+    "confidence": 0.98,
+    "evidence": "This episode is brought to you by LifeLock.",
+    "end_evidence": "Terms apply."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":2248,\"end_index\":2262,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"Food cooked over real wood is just on another level,\",\"end_evidence\":\"check out Traeger Grills.\"},{\"start_index\":2263,\"end_index\":2287,\"kind\":\"midroll\",\"confidence\":0.98,\"evidence\":\"This episode is brought to you by LifeLock.\",\"end_evidence\":\"Terms apply.\"}]}",
+ "meta": {
+  "wall_sec": 11.96,
+  "prompt_tokens": 2,
+  "completion_tokens": 1004,
+  "thinking_tokens": 792,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 14103,
+  "cost_usd": 0.0767862,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

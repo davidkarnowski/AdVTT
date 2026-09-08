@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 1737,
+    "end_index": 1761,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by LifeLock.",
+    "end_evidence": "Terms apply."
+   },
+   {
+    "start_index": 1762,
+    "end_index": 1784,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is sponsored by BetterHelp.",
+    "end_evidence": "That's BetterHelp.com."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":1737,\"end_index\":1761,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by LifeLock.\",\"end_evidence\":\"Terms apply.\"},{\"start_index\":1762,\"end_index\":1784,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is sponsored by BetterHelp.\",\"end_evidence\":\"That's BetterHelp.com.\"}]}",
+ "meta": {
+  "wall_sec": 6.21,
+  "prompt_tokens": 2,
+  "completion_tokens": 439,
+  "thinking_tokens": 225,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 14210,
+  "cost_usd": 0.0719002,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

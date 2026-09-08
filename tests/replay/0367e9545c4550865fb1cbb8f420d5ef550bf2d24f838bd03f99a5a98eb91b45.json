@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 3877,
+    "end_index": 3886,
+    "kind": "preroll",
+    "confidence": 0.95,
+    "evidence": "for stronger, longer-lasting boners,",
+    "end_evidence": "and important safety information."
+   },
+   {
+    "start_index": 3887,
+    "end_index": 3918,
+    "kind": "preroll",
+    "confidence": 0.95,
+    "evidence": "This episode is brought to you by the farmer's dog.",
+    "end_evidence": "Just go to thefarmersdog.com slash Rogan."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":3877,\"end_index\":3886,\"kind\":\"preroll\",\"confidence\":0.95,\"evidence\":\"for stronger, longer-lasting boners,\",\"end_evidence\":\"and important safety information.\"},{\"start_index\":3887,\"end_index\":3918,\"kind\":\"preroll\",\"confidence\":0.95,\"evidence\":\"This episode is brought to you by the farmer's dog.\",\"end_evidence\":\"Just go to thefarmersdog.com slash Rogan.\"}]}",
+ "meta": {
+  "wall_sec": 7.66,
+  "prompt_tokens": 2,
+  "completion_tokens": 486,
+  "thinking_tokens": 262,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 4082,
+  "cost_usd": 0.026191199999999998,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

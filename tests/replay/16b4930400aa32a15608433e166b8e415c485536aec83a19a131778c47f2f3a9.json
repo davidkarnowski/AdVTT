@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 174,
+    "end_index": 189,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "Hey, Mike Baker here with a pro tip for dudes who want to dress well",
+    "end_evidence": "Now available in Canada and the UK too."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":174,\"end_index\":189,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"Hey, Mike Baker here with a pro tip for dudes who want to dress well\",\"end_evidence\":\"Now available in Canada and the UK too.\"}]}",
+ "meta": {
+  "wall_sec": 7.49,
+  "prompt_tokens": 2,
+  "completion_tokens": 363,
+  "thinking_tokens": 213,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 11935,
+  "cost_usd": 0.0606982,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

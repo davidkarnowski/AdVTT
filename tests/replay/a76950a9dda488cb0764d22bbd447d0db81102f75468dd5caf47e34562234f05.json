@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 224,
+    "end_index": 244,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "Hey, Mike Baker here.",
+    "end_evidence": "and I want to thank Maud for sponsoring the PDB."
+   },
+   {
+    "start_index": 245,
+    "end_index": 265,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "Hey, Mike Baker here with a pro tip for everybody out there who loves delicious food, right?",
+    "end_evidence": "That's GoldBelly.com code PDB for 20% off your first order."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":224,\"end_index\":244,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"Hey, Mike Baker here.\",\"end_evidence\":\"and I want to thank Maud for sponsoring the PDB.\"},{\"start_index\":245,\"end_index\":265,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"Hey, Mike Baker here with a pro tip for everybody out there who loves delicious food, right?\",\"end_evidence\":\"That's GoldBelly.com code PDB for 20% off your first order.\"}]}",
+ "meta": {
+  "wall_sec": 9.62,
+  "prompt_tokens": 2,
+  "completion_tokens": 669,
+  "thinking_tokens": 419,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 9501,
+  "cost_usd": 0.0517292,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

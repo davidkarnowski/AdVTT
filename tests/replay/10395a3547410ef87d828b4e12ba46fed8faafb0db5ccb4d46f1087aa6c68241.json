@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 445,
+    "end_index": 455,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by Superpower.",
+    "end_evidence": "Go to superpower.com slash Rogan and take control of your health."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":445,\"end_index\":455,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by Superpower.\",\"end_evidence\":\"Go to superpower.com slash Rogan and take control of your health.\"}]}",
+ "meta": {
+  "wall_sec": 6.06,
+  "prompt_tokens": 2,
+  "completion_tokens": 272,
+  "thinking_tokens": 128,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 10225,
+  "cost_usd": 0.0537642,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

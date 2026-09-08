@@ -1,0 +1,46 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-opus-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 177,
+    "end_index": 190,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "you do enjoy the occasional night out, right?",
+    "end_evidence": "code PDB for 15% off."
+   },
+   {
+    "start_index": 191,
+    "end_index": 202,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here with a word about personal health",
+    "end_evidence": "That's promo code PDB at takeleane.com."
+   },
+   {
+    "start_index": 247,
+    "end_index": 251,
+    "kind": "postroll",
+    "confidence": 0.88,
+    "evidence": "So there goes my big idea for the commercial.",
+    "end_evidence": "See terms."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":177,\"end_index\":190,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"you do enjoy the occasional night out, right?\",\"end_evidence\":\"code PDB for 15% off.\"},{\"start_index\":191,\"end_index\":202,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here with a word about personal health\",\"end_evidence\":\"That's promo code PDB at takeleane.com.\"},{\"start_index\":247,\"end_index\":251,\"kind\":\"postroll\",\"confidence\":0.88,\"evidence\":\"So there goes my big idea for the commercial.\",\"end_evidence\":\"See terms.\"}]}",
+ "meta": {
+  "wall_sec": 9.11,
+  "prompt_tokens": 2,
+  "completion_tokens": 597,
+  "thinking_tokens": 305,
+  "cache_read_tokens": 7249,
+  "cache_write_tokens": 7649,
+  "cost_usd": 0.09888050000000001,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

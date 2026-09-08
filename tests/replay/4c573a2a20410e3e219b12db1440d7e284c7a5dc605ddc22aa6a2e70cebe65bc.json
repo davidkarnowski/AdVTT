@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-opus-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 174,
+    "end_index": 189,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here with a pro tip for dudes who want to dress well",
+    "end_evidence": "That's Quints, Q-U-I-N-C-E, Quints.com slash PDB."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":174,\"end_index\":189,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here with a pro tip for dudes who want to dress well\",\"end_evidence\":\"That's Quints, Q-U-I-N-C-E, Quints.com slash PDB.\"}]}",
+ "meta": {
+  "wall_sec": 5.86,
+  "prompt_tokens": 2,
+  "completion_tokens": 226,
+  "thinking_tokens": 60,
+  "cache_read_tokens": 7249,
+  "cache_write_tokens": 13379,
+  "cost_usd": 0.1498025,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

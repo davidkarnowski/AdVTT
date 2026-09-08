@@ -1,0 +1,46 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 193,
+    "end_index": 203,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "Hey, Mike Baker here. Now, I've been a business owner for years",
+    "end_evidence": "months when you go to Quo.com slash PDB"
+   },
+   {
+    "start_index": 204,
+    "end_index": 216,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "Hey, Mike Baker here with a message for dog lovers",
+    "end_evidence": "sundaysfordogs.com slash PDB, or use code PDB at checkout"
+   },
+   {
+    "start_index": 248,
+    "end_index": 249,
+    "kind": "house",
+    "confidence": 0.9,
+    "evidence": "And if you'd like your PDB ad free, well, we can make that happen",
+    "end_evidence": "Just become a premium member of the president's daily brief by visiting PDBpremium.com"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":193,\"end_index\":203,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"Hey, Mike Baker here. Now, I've been a business owner for years\",\"end_evidence\":\"months when you go to Quo.com slash PDB\"},{\"start_index\":204,\"end_index\":216,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"Hey, Mike Baker here with a message for dog lovers\",\"end_evidence\":\"sundaysfordogs.com slash PDB, or use code PDB at checkout\"},{\"start_index\":248,\"end_index\":249,\"kind\":\"house\",\"confidence\":0.9,\"evidence\":\"And if you'd like your PDB ad free, well, we can make that happen\",\"end_evidence\":\"Just become a premium member of the president's daily brief by visiting PDBpremium.com\"}]}",
+ "meta": {
+  "wall_sec": 9.68,
+  "prompt_tokens": 2,
+  "completion_tokens": 764,
+  "thinking_tokens": 430,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 8790,
+  "cost_usd": 0.0492272,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

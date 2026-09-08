@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 256,
+    "end_index": 286,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "hand you a CPAP machine?",
+    "end_evidence": "Check out the risks and benefits at springsleep.com."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":256,\"end_index\":286,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"hand you a CPAP machine?\",\"end_evidence\":\"Check out the risks and benefits at springsleep.com.\"}]}",
+ "meta": {
+  "wall_sec": 11.49,
+  "prompt_tokens": 2,
+  "completion_tokens": 517,
+  "thinking_tokens": 378,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 12976,
+  "cost_usd": 0.0669292,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-opus-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 335,
+    "end_index": 345,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "about personal health and weight loss",
+    "end_evidence": "That's promo code PDB at take lean dot"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":335,\"end_index\":345,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"about personal health and weight loss\",\"end_evidence\":\"That's promo code PDB at take lean dot\"}]}",
+ "meta": {
+  "wall_sec": 7.81,
+  "prompt_tokens": 2,
+  "completion_tokens": 353,
+  "thinking_tokens": 220,
+  "cache_read_tokens": 7249,
+  "cache_write_tokens": 14024,
+  "cost_usd": 0.1598165,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

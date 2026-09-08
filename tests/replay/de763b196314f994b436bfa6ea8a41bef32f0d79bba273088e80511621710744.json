@@ -1,0 +1,21 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-haiku-4-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": []
+ },
+ "raw_text": "{\"ad_spans\":[]}",
+ "meta": {
+  "wall_sec": 11.47,
+  "prompt_tokens": 10,
+  "completion_tokens": 844,
+  "thinking_tokens": 660,
+  "cache_read_tokens": 9507,
+  "cache_write_tokens": 10847,
+  "cost_usd": 0.0348067,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

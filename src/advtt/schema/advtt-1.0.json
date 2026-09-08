@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://advtt.dev/schema/advtt-1.0.json",
+  "title": "AdVTT advertising disclosure record",
+  "description": "One record per media rendition: where advertising and sponsorship occur, with provenance. Draft profile advtt/1.0 (Research/08 §4.1).",
+  "type": "object",
+  "required": ["profile", "generated", "media", "stt", "classifier", "status", "thresholds", "spans"],
+  "properties": {
+    "profile": {"const": "advtt/1.0"},
+    "generated": {"type": "string", "format": "date-time"},
+    "media": {
+      "type": "object",
+      "properties": {
+        "path": {"type": "string"},
+        "duration_sec": {"type": "number"},
+        "bytes": {"type": "integer"},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "source": {"type": "object"},
+    "stt": {
+      "type": "object",
+      "properties": {
+        "provider": {"type": "string"},
+        "model": {"type": "string"},
+        "timing": {"enum": ["model", "proportional"]},
+        "has_words": {"type": "boolean"},
+        "segment_count": {"type": "integer"}
+      }
+    },
+    "classifier": {
+      "type": "object",
+      "required": ["provider", "model", "prompt_version"],
+      "properties": {
+        "provider": {"type": ["string", "null"]},
+        "model": {"type": ["string", "null"]},
+        "prompt_version": {"type": "string"},
+        "schema_version": {"type": "integer"},
+        "chunks": {"type": "integer"},
+        "incomplete_chunks": {"type": "integer"},
+        "retried_half_window": {"type": "boolean"},
+        "ensemble": {"type": "object"}
+      }
+    },
+    "status": {"enum": ["ok", "rejected_overlabel", "rejected_degenerate", "failed", "no_transcript"]},
+    "thresholds": {"type": "object"},
+    "transcript_sha256": {"type": ["string", "null"]},
+    "duration_sec": {"type": ["number", "null"]},
+    "stats": {"type": ["object", "null"]},
+    "spans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "start", "end", "category", "action", "confidence", "provenance"],
+        "properties": {
+          "id": {"type": "string"},
+          "start": {"type": "number", "minimum": 0},
+          "end": {"type": "number", "minimum": 0},
+          "category": {"enum": ["sponsor", "selfpromo", "interaction", "crosspromo", "intro", "outro", "preview", "program"]},
+          "form": {"enum": ["host_read", "produced", "sponsorship_credit", "unknown"]},
+          "position": {"enum": ["preroll", "midroll", "postroll", "unknown"]},
+          "delivery": {"enum": ["baked_in", "inserted", "unknown"]},
+          "action": {"enum": ["none", "prompt", "skip", "mute"]},
+          "state": {"enum": ["ad", "uncertain", "content"]},
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "confidence_source": {"enum": ["verbalised", "agreement", "calibrated", "human"]},
+          "agreement": {"type": "object"},
+          "advertiser": {"type": "object"},
+          "edges": {"type": "object", "properties": {"mode": {"enum": ["segment", "word", "aligner", "acoustic"]}}},
+          "provenance": {"enum": ["machine", "human", "mixed"]}
+        }
+      }
+    }
+  }
+}

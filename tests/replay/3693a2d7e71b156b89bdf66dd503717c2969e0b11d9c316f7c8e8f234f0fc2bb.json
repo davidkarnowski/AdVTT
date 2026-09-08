@@ -1,0 +1,46 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 227,
+    "end_index": 257,
+    "kind": "midroll",
+    "confidence": 0.9,
+    "evidence": "The wait is over.",
+    "end_evidence": "Terms at dkng.co.offer."
+   },
+   {
+    "start_index": 258,
+    "end_index": 290,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This episode is brought to you by the Farmer's Dog.",
+    "end_evidence": "This offer is for new customers only."
+   },
+   {
+    "start_index": 291,
+    "end_index": 315,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This episode is brought to you by LifeLock.",
+    "end_evidence": "Terms apply."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":227,\"end_index\":257,\"kind\":\"midroll\",\"confidence\":0.9,\"evidence\":\"The wait is over.\",\"end_evidence\":\"Terms at dkng.co.offer.\"},{\"start_index\":258,\"end_index\":290,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This episode is brought to you by the Farmer's Dog.\",\"end_evidence\":\"This offer is for new customers only.\"},{\"start_index\":291,\"end_index\":315,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This episode is brought to you by LifeLock.\",\"end_evidence\":\"Terms apply.\"}]}",
+ "meta": {
+  "wall_sec": 15.97,
+  "prompt_tokens": 2,
+  "completion_tokens": 1443,
+  "thinking_tokens": 1158,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 13245,
+  "cost_usd": 0.0769932,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

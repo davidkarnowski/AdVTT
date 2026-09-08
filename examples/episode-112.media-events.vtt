@@ -1,0 +1,34 @@
+WEBVTT
+NOTE ADVTT/0.1
+{"profile":"advtt/0.1","media_id":"signal-noise-112","media_duration_sec":2412.4,
+ "generated":"2026-09-01T09:14:02Z",
+ "stt":{"provider":"whisper-mlx","model":"mlx-community/whisper-small-mlx","timing":"model","has_words":true},
+ "classifier":{"provider":"openai","model":"gpt-5.5","prompt_version":"2026-08-g","chunk_tokens":6000},
+ "status":"ok","segment_count":812,"source_sha256":"9f2c4e…",
+ "thresholds":{"ad":0.75,"uncertain":0.40},
+ "stats":{"ad_spans":2,"ad_seconds":58.5,"ad_fraction":0.024},
+ "analysis":"episode-112.analysis.json"}
+
+NOTE
+Cue payload line 1 is the vocabulary token, for humans and for any consumer that
+only reads the first line. Line 2 is the normative JSON object. A cue with no
+JSON line is still conforming and means only "this interval is of this type".
+
+ad-001
+00:12:31.200 --> 00:12:59.800
+ADVERTISEMENT
+{"v":"advtt/0.1","type":"ADVERTISEMENT","id":"ad-001","confidence":0.98,"state":"ad","kind":"midroll","skippable":true,"label":"Acme Corporation","edges":{"mode":"word","start_exact":751.24,"end_exact":779.80,"start_confidence":0.93,"end_confidence":0.88},"segments":[197,246]}
+
+ad-002
+00:27:44.100 --> 00:28:14.000
+SPONSORSHIP
+{"v":"advtt/0.1","type":"SPONSORSHIP","id":"ad-002","confidence":0.61,"state":"uncertain","kind":"midroll","skippable":false,"label":"Example Company","edges":{"mode":"segment","start_exact":1664.10,"end_exact":1694.00},"segments":[541,552],"note":"evidence quote did not match verbatim; confidence halved"}
+
+NOTE
+PROGRAM cues are optional and are emitted only with --emit-program. They are the
+complement of every non-PROGRAM cue, so a consumer can reconstruct them.
+
+prog-001
+00:00:00.000 --> 00:12:31.200
+PROGRAM
+{"v":"advtt/0.1","type":"PROGRAM","id":"prog-001","confidence":1.0,"derived":true}

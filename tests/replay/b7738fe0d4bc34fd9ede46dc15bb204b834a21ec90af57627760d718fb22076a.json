@@ -1,0 +1,46 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-opus-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 65,
+    "end_index": 76,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here with a pro tip for everybody out there",
+    "end_evidence": "get 20% off your first order with promo code PDB"
+   },
+   {
+    "start_index": 77,
+    "end_index": 90,
+    "kind": "midroll",
+    "confidence": 0.93,
+    "evidence": "code PDB for 20% off your first order",
+    "end_evidence": "Real growth, fast funding, Cardiff, borrow better."
+   },
+   {
+    "start_index": 128,
+    "end_index": 141,
+    "kind": "postroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here with an important message for homeowners",
+    "end_evidence": "for 50% less. Savings are compared to renewal price void in Florida."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":65,\"end_index\":76,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here with a pro tip for everybody out there\",\"end_evidence\":\"get 20% off your first order with promo code PDB\"},{\"start_index\":77,\"end_index\":90,\"kind\":\"midroll\",\"confidence\":0.93,\"evidence\":\"code PDB for 20% off your first order\",\"end_evidence\":\"Real growth, fast funding, Cardiff, borrow better.\"},{\"start_index\":128,\"end_index\":141,\"kind\":\"postroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here with an important message for homeowners\",\"end_evidence\":\"for 50% less. Savings are compared to renewal price void in Florida.\"}]}",
+ "meta": {
+  "wall_sec": 11.26,
+  "prompt_tokens": 2,
+  "completion_tokens": 751,
+  "thinking_tokens": 421,
+  "cache_read_tokens": 7249,
+  "cache_write_tokens": 12233,
+  "cost_usd": 0.14984450000000002,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

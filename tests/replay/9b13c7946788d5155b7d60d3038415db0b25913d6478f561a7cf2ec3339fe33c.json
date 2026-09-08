@@ -1,0 +1,46 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-haiku-4-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 65,
+    "end_index": 76,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here with a pro tip for",
+    "end_evidence": "just go to goldbullety.com and get 20% off your first order with promo code PDB. That's goldbelly.com"
+   },
+   {
+    "start_index": 77,
+    "end_index": 90,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here. Now, many of you may know me",
+    "end_evidence": "Again, that's cardiff.co.pdb. Real growth, fast funding, Cardiff, borrow better."
+   },
+   {
+    "start_index": 128,
+    "end_index": 141,
+    "kind": "postroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here with an important message for homeowners",
+    "end_evidence": "for 50% less. Savings are compared to renewal price void in Florida."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":65,\"end_index\":76,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here with a pro tip for\",\"end_evidence\":\"just go to goldbullety.com and get 20% off your first order with promo code PDB. That's goldbelly.com\"},{\"start_index\":77,\"end_index\":90,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here. Now, many of you may know me\",\"end_evidence\":\"Again, that's cardiff.co.pdb. Real growth, fast funding, Cardiff, borrow better.\"},{\"start_index\":128,\"end_index\":141,\"kind\":\"postroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here with an important message for homeowners\",\"end_evidence\":\"for 50% less. Savings are compared to renewal price void in Florida.\"}]}",
+ "meta": {
+  "wall_sec": 161.72,
+  "prompt_tokens": 10,
+  "completion_tokens": 15512,
+  "thinking_tokens": 14754,
+  "cache_read_tokens": 9507,
+  "cache_write_tokens": 8149,
+  "cost_usd": 0.0999187,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

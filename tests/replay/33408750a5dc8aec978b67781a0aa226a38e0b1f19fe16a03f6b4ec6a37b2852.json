@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-haiku-4-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 1096,
+    "end_index": 1115,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This episode is brought to you by Uber Eats",
+    "end_evidence": "See app for details"
+   },
+   {
+    "start_index": 1116,
+    "end_index": 1137,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "This episode is brought to you by Blue Chew",
+    "end_evidence": "safety information"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":1096,\"end_index\":1115,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This episode is brought to you by Uber Eats\",\"end_evidence\":\"See app for details\"},{\"start_index\":1116,\"end_index\":1137,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"This episode is brought to you by Blue Chew\",\"end_evidence\":\"safety information\"}]}",
+ "meta": {
+  "wall_sec": 35.78,
+  "prompt_tokens": 10,
+  "completion_tokens": 3405,
+  "thinking_tokens": 2845,
+  "cache_read_tokens": 9507,
+  "cache_write_tokens": 11110,
+  "cost_usd": 0.047959699999999994,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

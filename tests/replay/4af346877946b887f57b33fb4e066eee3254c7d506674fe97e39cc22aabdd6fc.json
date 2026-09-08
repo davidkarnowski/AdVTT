@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 2149,
+    "end_index": 2177,
+    "kind": "midroll",
+    "confidence": 0.98,
+    "evidence": "This episode is brought to you by SimpliSafe.",
+    "end_evidence": "there's no safe like Simply Safe."
+   },
+   {
+    "start_index": 2178,
+    "end_index": 2207,
+    "kind": "midroll",
+    "confidence": 0.98,
+    "evidence": "This episode is brought to you by Chime.",
+    "end_evidence": "Go to chime.com slash disclosures for more details."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":2149,\"end_index\":2177,\"kind\":\"midroll\",\"confidence\":0.98,\"evidence\":\"This episode is brought to you by SimpliSafe.\",\"end_evidence\":\"there's no safe like Simply Safe.\"},{\"start_index\":2178,\"end_index\":2207,\"kind\":\"midroll\",\"confidence\":0.98,\"evidence\":\"This episode is brought to you by Chime.\",\"end_evidence\":\"Go to chime.com slash disclosures for more details.\"}]}",
+ "meta": {
+  "wall_sec": 8.65,
+  "prompt_tokens": 2,
+  "completion_tokens": 427,
+  "thinking_tokens": 200,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 13374,
+  "cost_usd": 0.0683282,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

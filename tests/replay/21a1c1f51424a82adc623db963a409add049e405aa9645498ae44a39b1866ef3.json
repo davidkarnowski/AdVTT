@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-haiku-4-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 1729,
+    "end_index": 1743,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "A good day starts with a solid morning routine",
+    "end_evidence": "zinc carnosine for gut health,"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":1729,\"end_index\":1743,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"A good day starts with a solid morning routine\",\"end_evidence\":\"zinc carnosine for gut health,\"}]}",
+ "meta": {
+  "wall_sec": 26.35,
+  "prompt_tokens": 10,
+  "completion_tokens": 2564,
+  "thinking_tokens": 2183,
+  "cache_read_tokens": 9507,
+  "cache_write_tokens": 11571,
+  "cost_usd": 0.0448947,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

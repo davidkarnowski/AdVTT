@@ -1,0 +1,54 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 74,
+    "end_index": 83,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "preparing for the future and protecting your loved ones. Look, you know, this life can bring the",
+    "end_evidence": "slash PDB. That's ethos ETHOS ethos.com slash PDB. Application times and rates may vary"
+   },
+   {
+    "start_index": 84,
+    "end_index": 97,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "Hey Mike Baker here. Now if you're like me, you do enjoy the",
+    "end_evidence": "Remember, zbiotics.com slash PDB code PDB for 15% off."
+   },
+   {
+    "start_index": 143,
+    "end_index": 143,
+    "kind": "house",
+    "confidence": 0.9,
+    "evidence": "add free, that's very simple. Just become a premium member of the President's Daily Brief",
+    "end_evidence": "add free, that's very simple. Just become a premium member of the President's Daily Brief"
+   },
+   {
+    "start_index": 146,
+    "end_index": 157,
+    "kind": "postroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here with a word about personal health and weight loss.",
+    "end_evidence": "That's promo code PDB at takeleane.com."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":74,\"end_index\":83,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"preparing for the future and protecting your loved ones. Look, you know, this life can bring the\",\"end_evidence\":\"slash PDB. That's ethos ETHOS ethos.com slash PDB. Application times and rates may vary\"},{\"start_index\":84,\"end_index\":97,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"Hey Mike Baker here. Now if you're like me, you do enjoy the\",\"end_evidence\":\"Remember, zbiotics.com slash PDB code PDB for 15% off.\"},{\"start_index\":143,\"end_index\":143,\"kind\":\"house\",\"confidence\":0.9,\"evidence\":\"add free, that's very simple. Just become a premium member of the President's Daily Brief\",\"end_evidence\":\"add free, that's very simple. Just become a premium member of the President's Daily Brief\"},{\"start_index\":146,\"end_index\":157,\"kind\":\"postroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here with a word about personal health and weight loss.\",\"end_evidence\":\"That's promo code PDB at takeleane.com.\"}]}",
+ "meta": {
+  "wall_sec": 24.51,
+  "prompt_tokens": 2,
+  "completion_tokens": 2403,
+  "thinking_tokens": 1921,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 8487,
+  "cost_usd": 0.06611220000000001,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

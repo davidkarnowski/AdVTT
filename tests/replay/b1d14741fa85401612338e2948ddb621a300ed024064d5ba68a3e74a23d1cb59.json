@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 3356,
+    "end_index": 3378,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by ShipStation.",
+    "end_evidence": "code JRE."
+   },
+   {
+    "start_index": 3379,
+    "end_index": 3406,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by Chime.",
+    "end_evidence": "Go to Chime.com slash disclosures for more details."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":3356,\"end_index\":3378,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by ShipStation.\",\"end_evidence\":\"code JRE.\"},{\"start_index\":3379,\"end_index\":3406,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by Chime.\",\"end_evidence\":\"Go to Chime.com slash disclosures for more details.\"}]}",
+ "meta": {
+  "wall_sec": 6.76,
+  "prompt_tokens": 2,
+  "completion_tokens": 443,
+  "thinking_tokens": 225,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 14135,
+  "cost_usd": 0.0713252,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

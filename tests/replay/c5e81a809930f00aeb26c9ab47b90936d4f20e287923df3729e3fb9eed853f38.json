@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-opus-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 571,
+    "end_index": 596,
+    "kind": "midroll",
+    "confidence": 0.95,
+    "evidence": "Hey, Mike Baker here.",
+    "end_evidence": "Quo.com. Slash PDB."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":571,\"end_index\":596,\"kind\":\"midroll\",\"confidence\":0.95,\"evidence\":\"Hey, Mike Baker here.\",\"end_evidence\":\"Quo.com. Slash PDB.\"}]}",
+ "meta": {
+  "wall_sec": 5.36,
+  "prompt_tokens": 2,
+  "completion_tokens": 247,
+  "thinking_tokens": 113,
+  "cache_read_tokens": 7249,
+  "cache_write_tokens": 14619,
+  "cost_usd": 0.1633295,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

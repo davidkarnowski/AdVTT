@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-opus-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 248,
+    "end_index": 255,
+    "kind": "midroll",
+    "confidence": 0.92,
+    "evidence": "Hey, Mike Baker here.",
+    "end_evidence": "But as a result of your snoring, did somebody, maybe your partner,"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":248,\"end_index\":255,\"kind\":\"midroll\",\"confidence\":0.92,\"evidence\":\"Hey, Mike Baker here.\",\"end_evidence\":\"But as a result of your snoring, did somebody, maybe your partner,\"}]}",
+ "meta": {
+  "wall_sec": 4.13,
+  "prompt_tokens": 2,
+  "completion_tokens": 185,
+  "thinking_tokens": 41,
+  "cache_read_tokens": 7249,
+  "cache_write_tokens": 13595,
+  "cost_usd": 0.15082949999999998,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

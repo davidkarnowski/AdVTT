@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 636,
+    "end_index": 636,
+    "kind": "house",
+    "confidence": 0.85,
+    "evidence": "Finally, to listen to the podcast of this show ad free, just become a premium member of the",
+    "end_evidence": "Finally, to listen to the podcast of this show ad free, just become a premium member of the"
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":636,\"end_index\":636,\"kind\":\"house\",\"confidence\":0.85,\"evidence\":\"Finally, to listen to the podcast of this show ad free, just become a premium member of the\",\"end_evidence\":\"Finally, to listen to the podcast of this show ad free, just become a premium member of the\"}]}",
+ "meta": {
+  "wall_sec": 11.53,
+  "prompt_tokens": 2,
+  "completion_tokens": 906,
+  "thinking_tokens": 744,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 9013,
+  "cost_usd": 0.051924200000000004,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

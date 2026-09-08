@@ -1,0 +1,375 @@
+{
+ "generated": "2026-09-06T11:29:33+00:00",
+ "episodes": [
+  {
+   "show": "jre",
+   "guid": "99c85bdc-9523-11f1-8cce-6b6deb9f7357",
+   "title": "JRE MMA Show #184 with Aljamain Sterling",
+   "pubDate": "2026-08-11T17:00:00+00:00",
+   "enclosure_url": "https://traffic.megaphone.fm/GLT9611837612.mp3",
+   "final_host": "dcs-spotify.megaphone.fm",
+   "itunes_duration": "10507",
+   "stem": "2026-08-11_1700_JRE_MMA_Show_184_with_Aljamain_Sterling",
+   "downloads": [
+    {
+     "copy": "a",
+     "sha256": "d473c1c749ae4e145746a19d80c4498f9f1eaeed29c8da62d8fe1fb0be771ce5",
+     "bytes": 152454436,
+     "duration_sec": 10884.885
+    },
+    {
+     "copy": "b",
+     "sha256": "d473c1c749ae4e145746a19d80c4498f9f1eaeed29c8da62d8fe1fb0be771ce5",
+     "bytes": 152454436,
+     "duration_sec": 10884.885
+    }
+   ],
+   "dai_verdict": "identical",
+   "dai_notes": {
+    "size_delta": 0,
+    "duration_delta_sec": 0.0
+   },
+   "stt": {
+    "engine": "gladia",
+    "model": "solaria-1",
+    "segment_count": 5237,
+    "has_words": true,
+    "processing_time_sec": 517.1
+   },
+   "status": "complete"
+  },
+  {
+   "show": "jre",
+   "guid": "b5568610-9764-11f1-8761-4370c8a2da8b",
+   "title": "#2540 - Travis Barker",
+   "pubDate": "2026-08-14T17:00:00+00:00",
+   "enclosure_url": "https://traffic.megaphone.fm/GLT5593509812.mp3",
+   "final_host": "dcs-spotify.megaphone.fm",
+   "itunes_duration": "9381",
+   "stem": "2026-08-14_1700_2540_Travis_Barker",
+   "downloads": [
+    {
+     "copy": "a",
+     "sha256": "14e25926ecd1dc65ed25035130e6c0f8731c0e266e4c0b1b198b65334598bf15",
+     "bytes": 137551840,
+     "duration_sec": 9820.369
+    },
+    {
+     "copy": "b",
+     "sha256": "14e25926ecd1dc65ed25035130e6c0f8731c0e266e4c0b1b198b65334598bf15",
+     "bytes": 137551840,
+     "duration_sec": 9820.369
+    }
+   ],
+   "dai_verdict": "identical",
+   "dai_notes": {
+    "size_delta": 0,
+    "duration_delta_sec": 0.0
+   },
+   "stt": {
+    "engine": "gladia",
+    "model": "solaria-1",
+    "segment_count": 4002,
+    "has_words": true,
+    "processing_time_sec": 337.3
+   },
+   "status": "complete"
+  },
+  {
+   "show": "jre",
+   "guid": "d0eed536-9b6e-11f1-91e1-87ba07d621a5",
+   "title": "#2542 - Steve Hilton",
+   "pubDate": "2026-08-19T17:00:00+00:00",
+   "enclosure_url": "https://traffic.megaphone.fm/GLT6487899018.mp3",
+   "final_host": "dcs-spotify.megaphone.fm",
+   "itunes_duration": "11132",
+   "stem": "2026-08-19_1700_2542_Steve_Hilton",
+   "downloads": [
+    {
+     "copy": "a",
+     "sha256": "a90a7e7342c7a60749c00d1d839ebc688aef04054d56d3e283e2e96687dc9723",
+     "bytes": 161781709,
+     "duration_sec": 11551.138
+    },
+    {
+     "copy": "b",
+     "sha256": "a90a7e7342c7a60749c00d1d839ebc688aef04054d56d3e283e2e96687dc9723",
+     "bytes": 161781709,
+     "duration_sec": 11551.138
+    }
+   ],
+   "dai_verdict": "identical",
+   "dai_notes": {
+    "size_delta": 0,
+    "duration_delta_sec": 0.0
+   },
+   "stt": {
+    "engine": "gladia",
+    "model": "solaria-1",
+    "segment_count": 4560,
+    "has_words": true,
+    "processing_time_sec": 436.8
+   },
+   "status": "complete"
+  },
+  {
+   "show": "jre",
+   "guid": "9e1fb742-a1b8-11f1-9e55-d7d5779b3db3",
+   "title": "#2547 - Daniel Everett",
+   "pubDate": "2026-08-27T17:00:00+00:00",
+   "enclosure_url": "https://traffic.megaphone.fm/GLT8609844651.mp3",
+   "final_host": "dcs-spotify.megaphone.fm",
+   "itunes_duration": "9828",
+   "stem": "2026-08-27_1700_2547_Daniel_Everett",
+   "downloads": [
+    {
+     "copy": "a",
+     "sha256": "f32d8d07dd7c83a7d0e5605e0ee5cab9d0a7e48163d70a6fbc221901eb621da2",
+     "bytes": 143274910,
+     "duration_sec": 10229.655
+    },
+    {
+     "copy": "b",
+     "sha256": "f32d8d07dd7c83a7d0e5605e0ee5cab9d0a7e48163d70a6fbc221901eb621da2",
+     "bytes": 143274910,
+     "duration_sec": 10229.655
+    }
+   ],
+   "dai_verdict": "identical",
+   "dai_notes": {
+    "size_delta": 0,
+    "duration_delta_sec": 0.0
+   },
+   "stt": {
+    "engine": "gladia",
+    "model": "solaria-1",
+    "segment_count": 5109,
+    "has_words": true,
+    "processing_time_sec": 369.5
+   },
+   "status": "complete"
+  },
+  {
+   "show": "jre",
+   "guid": "b401b5a8-a594-11f1-a46b-ebbce54c9d78",
+   "title": "#2548 - Brian Simpson",
+   "pubDate": "2026-09-01T17:00:00+00:00",
+   "enclosure_url": "https://traffic.megaphone.fm/GLT1161328740.mp3",
+   "final_host": "dcs-spotify.megaphone.fm",
+   "itunes_duration": "10196",
+   "stem": "2026-09-01_1700_2548_Brian_Simpson",
+   "downloads": [
+    {
+     "copy": "a",
+     "sha256": "14c8726ce7208041b863c696870fa6816468a85cc44e94501d44f2ab07e16a43",
+     "bytes": 148473135,
+     "duration_sec": 10600.777
+    },
+    {
+     "copy": "b",
+     "sha256": "14c8726ce7208041b863c696870fa6816468a85cc44e94501d44f2ab07e16a43",
+     "bytes": 148473135,
+     "duration_sec": 10600.777
+    }
+   ],
+   "dai_verdict": "identical",
+   "dai_notes": {
+    "size_delta": 0,
+    "duration_delta_sec": 0.0
+   },
+   "stt": {
+    "engine": "gladia",
+    "model": "solaria-1",
+    "segment_count": 4861,
+    "has_words": true,
+    "processing_time_sec": 420.6
+   },
+   "status": "complete"
+  },
+  {
+   "show": "pdb",
+   "guid": "4d95f718-9269-11f1-bded-1f2a0d6a1f4b",
+   "title": "The PDB Situation Report | August 8th, 2026: The Iran War Exposed a Dangerous U.S. Weakness & America\u2019s New Nuclear Strategy",
+   "pubDate": "2026-08-08T10:00:00+00:00",
+   "enclosure_url": "https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/mgln.ai/e/101/clrtpod.com/m/pscrb.fm/rss/p/arttrk.com/p/MG4HN/speakeasystudio.ai/m/blWm9jc2AmsqrrZ3.mp3?u=1787694049",
+   "final_host": "cdn-media.speakeasystudio.ai",
+   "itunes_duration": "01:00:43",
+   "stem": "2026-08-08_1000_The_PDB_Situation_Report_August_8th_2026_The_Iran_War_Expose",
+   "downloads": [
+    {
+     "copy": "a",
+     "sha256": "d435f62e843cc256e982980545865ed464edcefaf09087b018720e93004787c0",
+     "bytes": 87784109,
+     "duration_sec": 3643.022
+    },
+    {
+     "copy": "b",
+     "sha256": "d435f62e843cc256e982980545865ed464edcefaf09087b018720e93004787c0",
+     "bytes": 87784109,
+     "duration_sec": 3643.022
+    }
+   ],
+   "dai_verdict": "identical",
+   "dai_notes": {
+    "size_delta": 0,
+    "duration_delta_sec": 0.0
+   },
+   "stt": {
+    "engine": "whisper-mlx",
+    "model": "mlx-community/whisper-small-mlx",
+    "segment_count": 639,
+    "has_words": true,
+    "processing_time_sec": 184.7
+   },
+   "status": "complete"
+  },
+  {
+   "show": "pdb",
+   "guid": "34fcc884-9ada-11f1-acea-6f2624fd3ba6",
+   "title": "August 18th, 2026:  Iran\u2019s Leaders Are Terrified of Another Uprising & Moscow\u2019s Secret Drone Network",
+   "pubDate": "2026-08-18T10:00:00+00:00",
+   "enclosure_url": "https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/mgln.ai/e/101/clrtpod.com/m/pscrb.fm/rss/p/arttrk.com/p/MG4HN/speakeasystudio.ai/m/nIZrfCKgWEIgnYkU.mp3?u=1787849964",
+   "final_host": "cdn-media.speakeasystudio.ai",
+   "itunes_duration": "00:23:02",
+   "stem": "2026-08-18_1000_August_18th_2026_Iran_s_Leaders_Are_Terrified_of_Another_Upr",
+   "downloads": [
+    {
+     "copy": "a",
+     "sha256": "057c32759765f5145c84c49f82bfc7f910b49ceb59e8bb88338ed05b03b34162",
+     "bytes": 33470874,
+     "duration_sec": 1382.172
+    },
+    {
+     "copy": "b",
+     "sha256": "057c32759765f5145c84c49f82bfc7f910b49ceb59e8bb88338ed05b03b34162",
+     "bytes": 33470874,
+     "duration_sec": 1382.172
+    }
+   ],
+   "dai_verdict": "identical",
+   "dai_notes": {
+    "size_delta": 0,
+    "duration_delta_sec": 0.0
+   },
+   "stt": {
+    "engine": "whisper-mlx",
+    "model": "mlx-community/whisper-small-mlx",
+    "segment_count": 252,
+    "has_words": true,
+    "processing_time_sec": 69.8
+   },
+   "status": "complete"
+  },
+  {
+   "show": "pdb",
+   "guid": "150c3c5a-9baf-11f1-813b-3f078e839694",
+   "title": "August 19th, 2026: Russia\u2019s Top Economist Says Putin Is Losing & Iran Fires on the UAE",
+   "pubDate": "2026-08-19T10:00:00+00:00",
+   "enclosure_url": "https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/mgln.ai/e/101/clrtpod.com/m/pscrb.fm/rss/p/arttrk.com/p/MG4HN/speakeasystudio.ai/m/PCmejZNSvSj2RYJE.mp3?u=1787692883",
+   "final_host": "cdn-media.speakeasystudio.ai",
+   "itunes_duration": "00:23:38",
+   "stem": "2026-08-19_1000_August_19th_2026_Russia_s_Top_Economist_Says_Putin_Is_Losing",
+   "downloads": [
+    {
+     "copy": "a",
+     "sha256": "2c0bbc053380b2d42cfb28979c87f8bcd312da0107f0e20eb75c2c75006d346b",
+     "bytes": 34650991,
+     "duration_sec": 1418.898
+    },
+    {
+     "copy": "b",
+     "sha256": "2c0bbc053380b2d42cfb28979c87f8bcd312da0107f0e20eb75c2c75006d346b",
+     "bytes": 34650991,
+     "duration_sec": 1418.898
+    }
+   ],
+   "dai_verdict": "identical",
+   "dai_notes": {
+    "size_delta": 0,
+    "duration_delta_sec": 0.0
+   },
+   "stt": {
+    "engine": "whisper-mlx",
+    "model": "mlx-community/whisper-small-mlx",
+    "segment_count": 287,
+    "has_words": true,
+    "processing_time_sec": 60.7
+   },
+   "status": "complete"
+  },
+  {
+   "show": "pdb",
+   "guid": "6339801a-9dbf-11f1-8df8-1fe21bee6768",
+   "title": "PDB Situation Report | August 22nd, 2026: Trump\u2019s Iran Crackdown Could Trigger a Collision With China",
+   "pubDate": "2026-08-22T10:00:00+00:00",
+   "enclosure_url": "https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/mgln.ai/e/101/clrtpod.com/m/pscrb.fm/rss/p/arttrk.com/p/MG4HN/speakeasystudio.ai/m/A3OfBbjfxq57l1du.mp3?u=1787393026",
+   "final_host": "cdn-media.speakeasystudio.ai",
+   "itunes_duration": "00:57:39",
+   "stem": "2026-08-22_1000_PDB_Situation_Report_August_22nd_2026_Trump_s_Iran_Crackdown",
+   "downloads": [
+    {
+     "copy": "a",
+     "sha256": "b078fecf693199558aa9b2f00055d782dee15974ed514782019c8ee8c0da858c",
+     "bytes": 83368335,
+     "duration_sec": 3459.219
+    },
+    {
+     "copy": "b",
+     "sha256": "b078fecf693199558aa9b2f00055d782dee15974ed514782019c8ee8c0da858c",
+     "bytes": 83368335,
+     "duration_sec": 3459.219
+    }
+   ],
+   "dai_verdict": "identical",
+   "dai_notes": {
+    "size_delta": 0,
+    "duration_delta_sec": 0.0
+   },
+   "stt": {
+    "engine": "whisper-mlx",
+    "model": "mlx-community/whisper-small-mlx",
+    "segment_count": 859,
+    "has_words": true,
+    "processing_time_sec": 171.7
+   },
+   "status": "complete"
+  },
+  {
+   "show": "pdb",
+   "guid": "d25b617e-a0c7-11f1-ac25-572ebc6d3213",
+   "title": "PDB Afternoon Bulletin | August 25th, 2026: Russia Just Crossed a Terrifying AI Threshold & Washington Reopens Embassies",
+   "pubDate": "2026-08-25T22:31:00+00:00",
+   "enclosure_url": "https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/mgln.ai/e/101/clrtpod.com/m/pscrb.fm/rss/p/arttrk.com/p/MG4HN/speakeasystudio.ai/m/HzVgqTa5ank8jwtK.mp3?u=1787850330",
+   "final_host": "cdn-media.speakeasystudio.ai",
+   "itunes_duration": "00:13:39",
+   "stem": "2026-08-25_2231_PDB_Afternoon_Bulletin_August_25th_2026_Russia_Just_Crossed",
+   "downloads": [
+    {
+     "copy": "a",
+     "sha256": "d352b976b43d21e1e73af6d21eae399649dbf6061fc1d2fecde592200abde28e",
+     "bytes": 19943253,
+     "duration_sec": 819.138
+    },
+    {
+     "copy": "b",
+     "sha256": "d352b976b43d21e1e73af6d21eae399649dbf6061fc1d2fecde592200abde28e",
+     "bytes": 19943253,
+     "duration_sec": 819.138
+    }
+   ],
+   "dai_verdict": "identical",
+   "dai_notes": {
+    "size_delta": 0,
+    "duration_delta_sec": 0.0
+   },
+   "stt": {
+    "engine": "whisper-mlx",
+    "model": "mlx-community/whisper-small-mlx",
+    "segment_count": 142,
+    "has_words": true,
+    "processing_time_sec": 34.8
+   },
+   "status": "complete"
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 5091,
+    "end_index": 5108,
+    "kind": "postroll",
+    "confidence": 0.95,
+    "evidence": "They've been on a mission to get you bricked up for years",
+    "end_evidence": "Visit BlueChew.com for more details and important safety information."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":5091,\"end_index\":5108,\"kind\":\"postroll\",\"confidence\":0.95,\"evidence\":\"They've been on a mission to get you bricked up for years\",\"end_evidence\":\"Visit BlueChew.com for more details and important safety information.\"}]}",
+ "meta": {
+  "wall_sec": 8.15,
+  "prompt_tokens": 2,
+  "completion_tokens": 484,
+  "thinking_tokens": 337,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 7347,
+  "cost_usd": 0.0388202,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

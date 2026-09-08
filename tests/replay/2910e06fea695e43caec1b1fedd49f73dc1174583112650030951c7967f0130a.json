@@ -1,0 +1,38 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 3794,
+    "end_index": 3815,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by Tocovas.",
+    "end_evidence": "off at Tocovas.com slash Rogan when you sign up for email and text."
+   },
+   {
+    "start_index": 3816,
+    "end_index": 3840,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "This episode is brought to you by LifeLock.",
+    "end_evidence": "Terms apply."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":3794,\"end_index\":3815,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by Tocovas.\",\"end_evidence\":\"off at Tocovas.com slash Rogan when you sign up for email and text.\"},{\"start_index\":3816,\"end_index\":3840,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"This episode is brought to you by LifeLock.\",\"end_evidence\":\"Terms apply.\"}]}",
+ "meta": {
+  "wall_sec": 4.73,
+  "prompt_tokens": 2,
+  "completion_tokens": 226,
+  "thinking_tokens": 0,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 13407,
+  "cost_usd": 0.0664912,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}

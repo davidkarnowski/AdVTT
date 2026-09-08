@@ -1,0 +1,54 @@
+{
+ "provider": "claude-cli",
+ "model": "claude-sonnet-5",
+ "prompt_version": "2026-08-g",
+ "obj": {
+  "ad_spans": [
+   {
+    "start_index": 65,
+    "end_index": 76,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "Hey, Mike Baker here with a pro tip for everybody out there who loves delicious food.",
+    "end_evidence": "That's goldbelly.com"
+   },
+   {
+    "start_index": 77,
+    "end_index": 90,
+    "kind": "midroll",
+    "confidence": 0.97,
+    "evidence": "Hey, Mike Baker here. Now, many of you may know me as the",
+    "end_evidence": "Real growth, fast funding, Cardiff, borrow better."
+   },
+   {
+    "start_index": 125,
+    "end_index": 126,
+    "kind": "house",
+    "confidence": 0.85,
+    "evidence": "to listen to the show ad-free, it is very simple, just become a",
+    "end_evidence": "premium member of the president's daily brief by visiting PDBpremium.com."
+   },
+   {
+    "start_index": 128,
+    "end_index": 141,
+    "kind": "postroll",
+    "confidence": 0.97,
+    "evidence": "Hey, Mike Baker here with an important message for homeowners.",
+    "end_evidence": "for 50% less. Savings are compared to renewal price void in Florida."
+   }
+  ]
+ },
+ "raw_text": "{\"ad_spans\":[{\"start_index\":65,\"end_index\":76,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"Hey, Mike Baker here with a pro tip for everybody out there who loves delicious food.\",\"end_evidence\":\"That's goldbelly.com\"},{\"start_index\":77,\"end_index\":90,\"kind\":\"midroll\",\"confidence\":0.97,\"evidence\":\"Hey, Mike Baker here. Now, many of you may know me as the\",\"end_evidence\":\"Real growth, fast funding, Cardiff, borrow better.\"},{\"start_index\":125,\"end_index\":126,\"kind\":\"house\",\"confidence\":0.85,\"evidence\":\"to listen to the show ad-free, it is very simple, just become a\",\"end_evidence\":\"premium member of the president's daily brief by visiting PDBpremium.com.\"},{\"start_index\":128,\"end_index\":141,\"kind\":\"postroll\",\"confidence\":0.97,\"evidence\":\"Hey, Mike Baker here with an important message for homeowners.\",\"end_evidence\":\"for 50% less. Savings are compared to renewal price void in Florida.\"}]}",
+ "meta": {
+  "wall_sec": 40.14,
+  "prompt_tokens": 2,
+  "completion_tokens": 3953,
+  "thinking_tokens": 3514,
+  "cache_read_tokens": 13106,
+  "cache_write_tokens": 11089,
+  "cost_usd": 0.09161119999999998,
+  "stop_reason": "tool_use",
+  "num_turns": 2,
+  "effort": null
+ }
+}
